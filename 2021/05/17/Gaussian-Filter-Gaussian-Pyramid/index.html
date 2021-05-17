@@ -20,25 +20,19 @@
     var CONFIG = {"hostname":"foreveryoungjay.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="拉普拉斯算子在平面内的数值近似 拉普拉斯滤波器卷积核表示  利用Laplacian滤波器实现图像的锐化 ​    由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。 ​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：  使用拉普拉斯滤波器实现的图像锐化算法 ↑ ​    其中，f(">
+  <meta name="description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_38131594&#x2F;article&#x2F;details&#x2F;80758734">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Laplacian滤波器并用于图像锐化">
-<meta property="og:url" content="https://foreveryoungjay.github.io/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/index.html">
+<meta property="og:title" content="Gaussian Filter &amp; Gaussian Pyramid">
+<meta property="og:url" content="https://foreveryoungjay.github.io/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/index.html">
 <meta property="og:site_name" content="YANG JIYI">
-<meta property="og:description" content="拉普拉斯算子在平面内的数值近似 拉普拉斯滤波器卷积核表示  利用Laplacian滤波器实现图像的锐化 ​    由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。 ​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：  使用拉普拉斯滤波器实现的图像锐化算法 ↑ ​    其中，f(">
+<meta property="og:description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_38131594&#x2F;article&#x2F;details&#x2F;80758734">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg">
-<meta property="article:published_time" content="2021-04-23T12:59:44.000Z">
-<meta property="article:modified_time" content="2021-04-23T13:03:56.552Z">
+<meta property="article:published_time" content="2021-05-17T14:08:08.000Z">
+<meta property="article:modified_time" content="2021-05-17T14:08:27.045Z">
 <meta property="article:author" content="YANG JIYI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png">
 
-<link rel="canonical" href="https://foreveryoungjay.github.io/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/">
+<link rel="canonical" href="https://foreveryoungjay.github.io/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/">
 
 
 <script id="page-configurations">
@@ -51,7 +45,7 @@
   };
 </script>
 
-  <title>Laplacian滤波器并用于图像锐化 | YANG JIYI</title>
+  <title>Gaussian Filter & Gaussian Pyramid | YANG JIYI</title>
   
 
 
@@ -171,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/">
+    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
@@ -184,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Laplacian滤波器并用于图像锐化
+          Gaussian Filter & Gaussian Pyramid
         </h1>
 
         <div class="post-meta">
@@ -195,7 +189,16 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-04-23 20:59:44 / Modified: 21:03:56" itemprop="dateCreated datePublished" datetime="2021-04-23T20:59:44+08:00">2021-04-23</time>
+              <time title="Created: 2021-05-17 22:08:08 / Modified: 22:08:27" itemprop="dateCreated datePublished" datetime="2021-05-17T22:08:08+08:00">2021-05-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CV/" itemprop="url" rel="index"><span itemprop="name">CV</span></a>
+                </span>
             </span>
 
           
@@ -209,17 +212,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
-<p>拉普拉斯滤波器卷积核表示</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
-<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
-<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
-<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
-<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
-<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
+        <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38131594/article/details/80758734">https://blog.csdn.net/qq_38131594/article/details/80758734</a></p>
 
     </div>
 
@@ -235,13 +228,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/23/MVC%E6%A8%A1%E5%BC%8F/" rel="prev" title="MVC模式">
-      <i class="fa fa-chevron-left"></i> MVC模式
+    <a href="/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/" rel="prev" title="Lucas-Kanade 追踪算法">
+      <i class="fa fa-chevron-left"></i> Lucas-Kanade 追踪算法
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/04/23/Fourier-transform-and-Gabor-transform/" rel="next" title="Fourier transform and Gabor transform">
-      Fourier transform and Gabor transform <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
