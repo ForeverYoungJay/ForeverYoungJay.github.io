@@ -26,6 +26,22 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Laplacian滤波器并用于图像锐化</title>
+    <url>/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</url>
+    <content><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
+<p>拉普拉斯滤波器卷积核表示</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
+<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
+<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
+<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
+<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
+<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Lucas-Kanade 追踪算法</title>
     <url>/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<p><a href="https://blog.csdn.net/u012554092/article/details/78128795">https://blog.csdn.net/u012554092/article/details/78128795</a></p>
@@ -57,16 +73,6 @@
       <categories>
         <category>Java</category>
       </categories>
-  </entry>
-  <entry>
-    <title>What&#39;s this website</title>
-    <url>/2021/04/17/What-s-this-website/</url>
-    <content><![CDATA[<p>此网站仅为学习过程中的笔记，供大家分享。</p>
-<p><strong>一緒に頑張りましょう！</strong></p>
-<p><strong>What I’m doing right now, I’m chasing perfection.</strong></p>
-<p>如有疑问请发邮件到 <a href="mailto:&#49;&#x33;&#48;&#49;&#52;&#x32;&#48;&#x34;&#x32;&#55;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;">&#49;&#x33;&#48;&#49;&#52;&#x32;&#48;&#x34;&#x32;&#55;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;</a></p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&fm=26&gp=0.jpg" alt="img"></p>
-]]></content>
   </entry>
   <entry>
     <title>Statement和PrepareStatement的区别详解</title>
@@ -101,6 +107,16 @@
       </categories>
   </entry>
   <entry>
+    <title>What&#39;s this website</title>
+    <url>/2021/04/17/What-s-this-website/</url>
+    <content><![CDATA[<p>此网站仅为学习过程中的笔记，供大家分享。</p>
+<p><strong>一緒に頑張りましょう！</strong></p>
+<p><strong>What I’m doing right now, I’m chasing perfection.</strong></p>
+<p>如有疑问请发邮件到 <a href="mailto:&#49;&#51;&#48;&#x31;&#x34;&#50;&#x30;&#x34;&#50;&#x37;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;">&#49;&#51;&#48;&#x31;&#x34;&#50;&#x30;&#x34;&#50;&#x37;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;</a></p>
+<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&fm=26&gp=0.jpg" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>active learning</title>
     <url>/2021/09/19/active-learning/</url>
     <content><![CDATA[<p>主动学习（Active Learning）的大致思路就是：通过机器学习的方法获取到那些比较<strong>“难”</strong>分类的样本数据，让人工再次确认和审核，然后将人工标注得到的数据再次使用有监督学习模型或者半监督学习模型进行训练，逐步提升模型的效果，将人工经验融入机器学习的模型中。</p>
@@ -123,6 +139,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>图像校正(Image Rectification)</title>
+    <url>/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
     <title>对极几何</title>
     <url>/2021/05/17/%E5%AF%B9%E6%9E%81%E5%87%A0%E4%BD%95/</url>
     <content><![CDATA[<p><a href="https://www.cnblogs.com/clarenceliang/p/6704970.html">https://www.cnblogs.com/clarenceliang/p/6704970.html</a></p>
@@ -143,27 +168,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>随机抽样一致算法（RANdom SAmple Consensus,RANSAC）</title>
-    <url>/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/</url>
-    <content><![CDATA[<p>一、RANSAC介绍<br>   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该算法核心思想就是随机性和假设性，随机性是根据正确数据出现概率去随机选取抽样数据，根据大数定律，随机性模拟可以近似得到正确结果。假设性是假设选取出的抽样数据都是正确数据，然后用这些正确数据通过问题满足的模型，去计算其他点，然后对这次结果进行一个评分。<br>二、算法基本思想<br>（1）要得到一个直线模型，需要两个点唯一确定一个直线方程。所以第一步随机选择两个点。<br>（2）通过这两个点，可以计算出这两个点所表示的模型方程y=ax+b。<br>（3）将所有的数据点套到这个模型中计算误差。<br>（4）找到所有满足误差阈值的点。<br>（5）然后我们再重复（1）~（4）这个过程，<strong>直到达到一定迭代次数后，选出那个被支持的最多的模型，作为问题的解</strong>。如下图所示</p>
-<p><img src="https://img-blog.csdn.net/20161201151915050" alt="img"></p>
-<p>可以发现，虽然这个数据集中外点和内点的比例几乎相等，但是RANSAC算法还是能找到最合适的解。这个问题如果使用最小二乘法进行优化，由于噪声数据的干扰，我们得到的结果肯定是一个错误的结果，如下图所示。<strong>这是由于最小二乘法是一个将外点参与讨论的代价优化问题，而RANSAC是一个使用内点进行优化的问题。</strong>经实验验证，对于包含80%误差的数据集，RANSAC的效果远优于直接的最小二乘法。</p>
-<p><img src="https://img-blog.csdn.net/20161201151925746" alt="img"></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>图像校正(Image Rectification)</title>
-    <url>/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
     <title>摄像机原理</title>
     <url>/2021/04/22/%E6%91%84%E5%83%8F%E6%9C%BA%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<p>The first important content is the <strong>image forming process.</strong> The image is an array. There is only one array for black and white images, and there are three arrays for color images. Then the picture is recorded by the camera because of the black box camera and the principle of small hole forming. There is a perspective effect through the camera, and the parallel lines will converge at a vanishing point in the distance in the picture. <strong>Homogeneous coordinates</strong> represent a vector that is originally n-dimensional with an n+1-dimensional vector, which refers to a coordinate system used in projection geometry, just like <strong>Cartesian coordinates used in Euclidean geometry.</strong> 2D and 3D transformations include homogeneous coordinates and transformation.</p>
@@ -179,19 +183,15 @@
       </categories>
   </entry>
   <entry>
-    <title>Laplacian滤波器并用于图像锐化</title>
-    <url>/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</url>
-    <content><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
-<p>拉普拉斯滤波器卷积核表示</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
-<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
-<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
-<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
-<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
-<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
+    <title>随机抽样一致算法（RANdom SAmple Consensus,RANSAC）</title>
+    <url>/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/</url>
+    <content><![CDATA[<p>一、RANSAC介绍<br>   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该算法核心思想就是随机性和假设性，随机性是根据正确数据出现概率去随机选取抽样数据，根据大数定律，随机性模拟可以近似得到正确结果。假设性是假设选取出的抽样数据都是正确数据，然后用这些正确数据通过问题满足的模型，去计算其他点，然后对这次结果进行一个评分。<br>二、算法基本思想<br>（1）要得到一个直线模型，需要两个点唯一确定一个直线方程。所以第一步随机选择两个点。<br>（2）通过这两个点，可以计算出这两个点所表示的模型方程y=ax+b。<br>（3）将所有的数据点套到这个模型中计算误差。<br>（4）找到所有满足误差阈值的点。<br>（5）然后我们再重复（1）~（4）这个过程，<strong>直到达到一定迭代次数后，选出那个被支持的最多的模型，作为问题的解</strong>。如下图所示</p>
+<p><img src="https://img-blog.csdn.net/20161201151915050" alt="img"></p>
+<p>可以发现，虽然这个数据集中外点和内点的比例几乎相等，但是RANSAC算法还是能找到最合适的解。这个问题如果使用最小二乘法进行优化，由于噪声数据的干扰，我们得到的结果肯定是一个错误的结果，如下图所示。<strong>这是由于最小二乘法是一个将外点参与讨论的代价优化问题，而RANSAC是一个使用内点进行优化的问题。</strong>经实验验证，对于包含80%误差的数据集，RANSAC的效果远优于直接的最小二乘法。</p>
+<p><img src="https://img-blog.csdn.net/20161201151925746" alt="img"></p>
 ]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
   </entry>
 </search>
