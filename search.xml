@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Fourier transform and Gabor transform</title>
-    <url>/2021/04/23/Fourier-transform-and-Gabor-transform/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/emouse/p/3611256.html">https://www.cnblogs.com/emouse/p/3611256.html</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Gaussian Filter &amp; Gaussian Pyramid</title>
-    <url>/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_38131594/article/details/80758734">https://blog.csdn.net/qq_38131594/article/details/80758734</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java没有main方法如何运行</title>
-    <url>/2021/04/22/Java%E6%B2%A1%E6%9C%89main%E6%96%B9%E6%B3%95%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C/</url>
-    <content><![CDATA[<p><strong>在该方法中构造main函数</strong></p>
-<p>Sources 一般用于标注类似 src 这种可编译目录。有时候我们不单单项目的 src 目录要可编译，还有其他一些特别的目录也许我们也要作为可编译的目录，就需要对该目录进行此标注。只有 Sources 这种可编译目录才可以新建 Java 类和包，这一点需要牢记。<br>Tests 一般用于标注可编译的单元测试目录。在规范的 maven 项目结构中，顶级目录是 src，maven 的 src 我们是不会设置为 Sources 的，而是在其子目录 main 目录下的 java 目录，我们会设置为 Sources。而单元测试的目录是 src - test - java，这里的 java 目录我们就会设置为 Tests，表示该目录是作为可编译的单元测试目录。一般这个和后面几个我们都是在 maven 项目下进行配置的，但是我这里还是会先说说。从这一点我们也可以看出 IntelliJ IDEA 对 maven 项目的支持是比彻底的。<br>Resources 一般用于标注资源文件目录。在 maven 项目下，资源目录是单独划分出来的，其目录为：src - main -resources，这里的 resources 目录我们就会设置为 Resources，表示该目录是作为资源目录。资源目录下的文件是会被编译到输出目录下的。<br>Test Resources 一般用于标注单元测试的资源文件目录。在 maven 项目下，单元测试的资源目录是单独划分出来的，其目录为：src - test -resources，这里的 resources 目录我们就会设置为 Test Resources，表示该目录是作为单元测试的资源目录。资源目录下的文件是会被编译到输出目录下的。<br>Excluded 一般用于标注排除目录。被排除的目录不会被 IntelliJ IDEA 创建索引，相当于被 IntelliJ IDEA 废弃，该目录下的代码文件是不具备代码检查和智能提示等常规代码功能。<br>通过上面的介绍，我们知道对于非 maven 项目我们只要会设置 src 即可。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Laplacian滤波器并用于图像锐化</title>
-    <url>/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</url>
-    <content><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
-<p>拉普拉斯滤波器卷积核表示</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
-<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
-<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
-<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
-<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
-<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Lucas-Kanade 追踪算法</title>
     <url>/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<p><a href="https://blog.csdn.net/u012554092/article/details/78128795">https://blog.csdn.net/u012554092/article/details/78128795</a></p>
 <p><a href="https://blog.csdn.net/u014568921/article/details/46638557">https://blog.csdn.net/u014568921/article/details/46638557</a></p>
 <p>算法实现：</p>
 <p><a href="https://blog.csdn.net/zhzhji440/article/details/43866695">https://blog.csdn.net/zhzhji440/article/details/43866695</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fourier transform and Gabor transform</title>
+    <url>/2021/04/23/Fourier-transform-and-Gabor-transform/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/emouse/p/3611256.html">https://www.cnblogs.com/emouse/p/3611256.html</a></p>
 ]]></content>
       <categories>
         <category>CV</category>
@@ -112,8 +80,62 @@
     <content><![CDATA[<p>此网站仅为学习过程中的笔记，供大家分享。</p>
 <p><strong>一緒に頑張りましょう！</strong></p>
 <p><strong>What I’m doing right now, I’m chasing perfection.</strong></p>
-<p>如有疑问请发邮件到 <a href="mailto:&#49;&#51;&#48;&#x31;&#x34;&#50;&#x30;&#x34;&#50;&#x37;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;">&#49;&#51;&#48;&#x31;&#x34;&#50;&#x30;&#x34;&#50;&#x37;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;</a></p>
+<p>如有疑问请发邮件到 <a href="mailto:&#x31;&#51;&#48;&#x31;&#52;&#50;&#48;&#x34;&#x32;&#x37;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#x6d;">&#x31;&#51;&#48;&#x31;&#52;&#50;&#48;&#x34;&#x32;&#x37;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&fm=26&gp=0.jpg" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Gaussian Filter &amp; Gaussian Pyramid</title>
+    <url>/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_38131594/article/details/80758734">https://blog.csdn.net/qq_38131594/article/details/80758734</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>对极几何</title>
+    <url>/2021/05/17/%E5%AF%B9%E6%9E%81%E5%87%A0%E4%BD%95/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/clarenceliang/p/6704970.html">https://www.cnblogs.com/clarenceliang/p/6704970.html</a></p>
+<p><a href="https://blog.csdn.net/tina_ttl/article/details/52749542">https://blog.csdn.net/tina_ttl/article/details/52749542</a></p>
+<p><a href="http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml">http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/79845576">https://zhuanlan.zhihu.com/p/79845576</a></p>
+<p><a href="https://blog.csdn.net/ssw_1990/article/details/53355572">https://blog.csdn.net/ssw_1990/article/details/53355572</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>图像校正(Image Rectification)</title>
+    <url>/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Java没有main方法如何运行</title>
+    <url>/2021/04/22/Java%E6%B2%A1%E6%9C%89main%E6%96%B9%E6%B3%95%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C/</url>
+    <content><![CDATA[<p><strong>在该方法中构造main函数</strong></p>
+<p>Sources 一般用于标注类似 src 这种可编译目录。有时候我们不单单项目的 src 目录要可编译，还有其他一些特别的目录也许我们也要作为可编译的目录，就需要对该目录进行此标注。只有 Sources 这种可编译目录才可以新建 Java 类和包，这一点需要牢记。<br>Tests 一般用于标注可编译的单元测试目录。在规范的 maven 项目结构中，顶级目录是 src，maven 的 src 我们是不会设置为 Sources 的，而是在其子目录 main 目录下的 java 目录，我们会设置为 Sources。而单元测试的目录是 src - test - java，这里的 java 目录我们就会设置为 Tests，表示该目录是作为可编译的单元测试目录。一般这个和后面几个我们都是在 maven 项目下进行配置的，但是我这里还是会先说说。从这一点我们也可以看出 IntelliJ IDEA 对 maven 项目的支持是比彻底的。<br>Resources 一般用于标注资源文件目录。在 maven 项目下，资源目录是单独划分出来的，其目录为：src - main -resources，这里的 resources 目录我们就会设置为 Resources，表示该目录是作为资源目录。资源目录下的文件是会被编译到输出目录下的。<br>Test Resources 一般用于标注单元测试的资源文件目录。在 maven 项目下，单元测试的资源目录是单独划分出来的，其目录为：src - test -resources，这里的 resources 目录我们就会设置为 Test Resources，表示该目录是作为单元测试的资源目录。资源目录下的文件是会被编译到输出目录下的。<br>Excluded 一般用于标注排除目录。被排除的目录不会被 IntelliJ IDEA 创建索引，相当于被 IntelliJ IDEA 废弃，该目录下的代码文件是不具备代码检查和智能提示等常规代码功能。<br>通过上面的介绍，我们知道对于非 maven 项目我们只要会设置 src 即可。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Laplacian滤波器并用于图像锐化</title>
+    <url>/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</url>
+    <content><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
+<p>拉普拉斯滤波器卷积核表示</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
+<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
+<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
+<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
+<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
+<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
 ]]></content>
   </entry>
   <entry>
@@ -137,28 +159,6 @@
 <p>需要注意的是，active learning是一个算法框架，上图中的单个模块具备可替换性（alternative）</p>
 <p><a href="https://zhuanlan.zhihu.com/p/239756522">https://zhuanlan.zhihu.com/p/239756522</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>图像校正(Image Rectification)</title>
-    <url>/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>对极几何</title>
-    <url>/2021/05/17/%E5%AF%B9%E6%9E%81%E5%87%A0%E4%BD%95/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/clarenceliang/p/6704970.html">https://www.cnblogs.com/clarenceliang/p/6704970.html</a></p>
-<p><a href="https://blog.csdn.net/tina_ttl/article/details/52749542">https://blog.csdn.net/tina_ttl/article/details/52749542</a></p>
-<p><a href="http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml">http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/79845576">https://zhuanlan.zhihu.com/p/79845576</a></p>
-<p><a href="https://blog.csdn.net/ssw_1990/article/details/53355572">https://blog.csdn.net/ssw_1990/article/details/53355572</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
   </entry>
   <entry>
     <title>快速补全代码</title>
