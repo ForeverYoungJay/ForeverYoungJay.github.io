@@ -6,7 +6,7 @@
   <link href="https://foreveryoungjay.github.io/atom.xml" rel="self"/>
   
   <link href="https://foreveryoungjay.github.io/"/>
-  <updated>2021-09-19T14:29:00.851Z</updated>
+  <updated>2021-11-05T13:17:46.631Z</updated>
   <id>https://foreveryoungjay.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cluster聚合层次聚类算法</title>
+    <link href="https://foreveryoungjay.github.io/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/"/>
+    <id>https://foreveryoungjay.github.io/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</id>
+    <published>2021-11-05T13:02:19.000Z</published>
+    <updated>2021-11-05T13:17:46.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。</p><p>根据聚类簇之间距离的计算方法的不同，层次聚类算法可以大致分为：单链接（Single-link）算法，全链接算法（complete-link）或均链接算法（average-link）。单链接算法用两个聚类簇中最近的样本距离作为两个簇之间的距离；而全链接使用计算两个聚类簇中最远的样本距离；均链接算法中两个聚类之间的距离由两个簇中所有的样本共同决定。</p><p><img src="https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg" alt="img"></p><p>“自底向上”的聚合层次聚类算法</p><p>（1）计算任意两个数据之间的距离得到一个相似度矩阵（proximity matrix），并把每一个单一的数据看作是一个聚类；</p><p>（2）查找相似度矩阵中距离最小的两个聚类，把他们聚合为一个新的聚类，然后根据这个新的聚类重新计算相似度矩阵；</p><p>（3）重复（2）直到所有的数据都被归入到一个聚类中。</p><p><img src="https://image.jiqizhixin.com/uploads/editor/ebee159c-0067-4ecc-af7a-2559c9e5f781/1523979971408.jpg" alt="img"></p><p>“自顶向下”的分拆（divisive）策略则与之相反。</p><p>可以使用单链接或者全链接的的方式来聚类簇之间的距离，会使得聚类的最终结果有所不同。</p><p>针对层次聚类不适于解决大量数据的问题，Zhang 等人提出了一种基于聚类特征树（Clustering Feature Tree）的层次聚类算法：BIRCH算法（Balanced Iterative Reducing and Clustering Using Hierarchies）。BIRCH算法实现了只需要一次对数据集的遍历就可以完成聚类。其聚类的主要过程就是将所有数据依次插入构建聚类特征树的过程，而树上的每一个节点所包含的数据构成了一个对应的聚类簇。同时对于包含数据极少的节点我们可以认为它是异常点从而进行去除。</p><p>层次聚类的另外一个变种算法是名为变色龙算法（Chameleon）。它是由George Karypis 教授提出的一种基于动态建模（Dynamic modeling）思想的层次聚类算法。该算法通过计算两个聚类簇之间的相似度和互连性从而克服CURE和ROCK等算法的缺点。变色龙算法首先将所有的数据根据他们之间的距离划分成众多的小的簇，通过计算相近簇之间的相似度和互连性不断合并形成大的聚类簇。</p><p>k-means</p><p>注意不要混淆K-近邻算法和K均值聚类。 K-近邻算法是一种分类算法，也是监督学习的一个子集。 K-means是一种聚类算法，也是非监督学习的一个子集。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。&lt;/p&gt;
+&lt;p&gt;根据聚类簇之间距离的计算方法的不同，层次聚类算法可以大致分为：单链接（Single-link）算法，全链接算法（complete-link）或均链接算法（average-link）。单链接算法用两个聚类簇中最近的样本距离作为两个簇之间的距离；而全链接使用计算两个聚类簇中最远的样本距离；均链接算法中两个聚类之间的距离由两个簇中所有的样本共同决定。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;“自底向上”的聚合层次聚类算法&lt;/p&gt;
+&lt;p&gt;（1）计算任意两个数据之间的距离得到一个相似度矩阵（proximity matrix），并把每一个单一的数据看作是一个聚类；&lt;/p&gt;
+&lt;p&gt;（2）查找相似度矩阵中距离最小的两个聚类，把他们聚合为一个新的聚类，然后根据这个新的聚类重新计算相似度矩阵；&lt;/p&gt;
+&lt;p&gt;（3）重复（2）直到所有的数据都被归入到一个聚类中。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://image.jiqizhixin.com/uploads/editor/ebee159c-0067-4ecc-af7a-2559c9e5f781/1523979971408.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;“自顶向下”的分拆（divisive）策略则与之相反。&lt;/p&gt;
+&lt;p&gt;可以使用单链接或者全链接的的方式来聚类簇之间的距离，会使得聚类的最终结果有所不同。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>active learning</title>

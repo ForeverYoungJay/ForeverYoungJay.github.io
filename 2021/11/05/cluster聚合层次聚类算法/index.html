@@ -20,19 +20,22 @@
     var CONFIG = {"hostname":"foreveryoungjay.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;LoseInVain&#x2F;article&#x2F;details&#x2F;102775734">
+  <meta name="description" content="层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。 根据聚类簇之间距">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图像校正(Image Rectification)">
-<meta property="og:url" content="https://foreveryoungjay.github.io/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/index.html">
+<meta property="og:title" content="cluster聚合层次聚类算法">
+<meta property="og:url" content="https://foreveryoungjay.github.io/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="YANG JIYI">
-<meta property="og:description" content="https:&#x2F;&#x2F;blog.csdn.net&#x2F;LoseInVain&#x2F;article&#x2F;details&#x2F;102775734">
+<meta property="og:description" content="层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。 根据聚类簇之间距">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-05-19T07:13:19.000Z">
-<meta property="article:modified_time" content="2021-05-19T07:14:20.786Z">
+<meta property="og:image" content="https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg">
+<meta property="og:image" content="https://image.jiqizhixin.com/uploads/editor/ebee159c-0067-4ecc-af7a-2559c9e5f781/1523979971408.jpg">
+<meta property="article:published_time" content="2021-11-05T13:02:19.000Z">
+<meta property="article:modified_time" content="2021-11-05T13:17:46.631Z">
 <meta property="article:author" content="YANG JIYI">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg">
 
-<link rel="canonical" href="https://foreveryoungjay.github.io/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/">
+<link rel="canonical" href="https://foreveryoungjay.github.io/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -45,7 +48,7 @@
   };
 </script>
 
-  <title>图像校正(Image Rectification) | YANG JIYI</title>
+  <title>cluster聚合层次聚类算法 | YANG JIYI</title>
   
 
 
@@ -194,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/">
+    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
@@ -207,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          图像校正(Image Rectification)
+          cluster聚合层次聚类算法
         </h1>
 
         <div class="post-meta">
@@ -218,16 +221,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-05-19 15:13:19 / Modified: 15:14:20" itemprop="dateCreated datePublished" datetime="2021-05-19T15:13:19+08:00">2021-05-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CV/" itemprop="url" rel="index"><span itemprop="name">CV</span></a>
-                </span>
+              <time title="Created: 2021-11-05 21:02:19 / Modified: 21:17:46" itemprop="dateCreated datePublished" datetime="2021-11-05T21:02:19+08:00">2021-11-05</time>
             </span>
 
           
@@ -241,7 +235,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
+        <p>层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。</p>
+<p>根据聚类簇之间距离的计算方法的不同，层次聚类算法可以大致分为：单链接（Single-link）算法，全链接算法（complete-link）或均链接算法（average-link）。单链接算法用两个聚类簇中最近的样本距离作为两个簇之间的距离；而全链接使用计算两个聚类簇中最远的样本距离；均链接算法中两个聚类之间的距离由两个簇中所有的样本共同决定。</p>
+<p><img src="https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg" alt="img"></p>
+<p>“自底向上”的聚合层次聚类算法</p>
+<p>（1）计算任意两个数据之间的距离得到一个相似度矩阵（proximity matrix），并把每一个单一的数据看作是一个聚类；</p>
+<p>（2）查找相似度矩阵中距离最小的两个聚类，把他们聚合为一个新的聚类，然后根据这个新的聚类重新计算相似度矩阵；</p>
+<p>（3）重复（2）直到所有的数据都被归入到一个聚类中。</p>
+<p><img src="https://image.jiqizhixin.com/uploads/editor/ebee159c-0067-4ecc-af7a-2559c9e5f781/1523979971408.jpg" alt="img"></p>
+<p>“自顶向下”的分拆（divisive）策略则与之相反。</p>
+<p>可以使用单链接或者全链接的的方式来聚类簇之间的距离，会使得聚类的最终结果有所不同。</p>
+<p>针对层次聚类不适于解决大量数据的问题，Zhang 等人提出了一种基于聚类特征树（Clustering Feature Tree）的层次聚类算法：BIRCH算法（Balanced Iterative Reducing and Clustering Using Hierarchies）。BIRCH算法实现了只需要一次对数据集的遍历就可以完成聚类。其聚类的主要过程就是将所有数据依次插入构建聚类特征树的过程，而树上的每一个节点所包含的数据构成了一个对应的聚类簇。同时对于包含数据极少的节点我们可以认为它是异常点从而进行去除。</p>
+<p>层次聚类的另外一个变种算法是名为变色龙算法（Chameleon）。它是由George Karypis 教授提出的一种基于动态建模（Dynamic modeling）思想的层次聚类算法。该算法通过计算两个聚类簇之间的相似度和互连性从而克服CURE和ROCK等算法的缺点。变色龙算法首先将所有的数据根据他们之间的距离划分成众多的小的簇，通过计算相近簇之间的相似度和互连性不断合并形成大的聚类簇。</p>
+<p>k-means</p>
+<p>注意不要混淆K-近邻算法和K均值聚类。 K-近邻算法是一种分类算法，也是监督学习的一个子集。 K-means是一种聚类算法，也是非监督学习的一个子集。</p>
 
     </div>
 
@@ -257,13 +264,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/" rel="prev" title="随机抽样一致算法（RANdom SAmple Consensus,RANSAC）">
-      <i class="fa fa-chevron-left"></i> 随机抽样一致算法（RANdom SAmple Consensus,RANSAC）
+    <a href="/2021/09/19/active-learning/" rel="prev" title="active learning">
+      <i class="fa fa-chevron-left"></i> active learning
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/09/19/active-learning/" rel="next" title="active learning">
-      active learning <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
