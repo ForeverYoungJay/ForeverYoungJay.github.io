@@ -6,7 +6,7 @@
   <link href="https://foreveryoungjay.github.io/atom.xml" rel="self"/>
   
   <link href="https://foreveryoungjay.github.io/"/>
-  <updated>2021-11-09T02:36:52.470Z</updated>
+  <updated>2021-11-09T13:42:01.016Z</updated>
   <id>https://foreveryoungjay.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何确定k在k-means</title>
+    <link href="https://foreveryoungjay.github.io/2021/11/09/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9Ak%E5%9C%A8k-means/"/>
+    <id>https://foreveryoungjay.github.io/2021/11/09/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9Ak%E5%9C%A8k-means/</id>
+    <published>2021-11-09T13:41:38.000Z</published>
+    <updated>2021-11-09T13:42:01.016Z</updated>
+    
+    <content type="html"><![CDATA[<p>常见的一种方法是elbow method，x轴为聚类的数量，y轴为WSS（within cluster sum of squares）也就是各个点到cluster中心的距离的平方的和。</p><p><img src="https://pic1.zhimg.com/v2-916dd08810a3e3ca23ecab29378cbfdc_r.jpg?source=1940ef5c" alt="preview"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;常见的一种方法是elbow method，x轴为聚类的数量，y轴为WSS（within cluster sum of squares）也就是各个点到cluster中心的距离的平方的和。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic1.zhimg.com/v2-916dd08810a3e3ca23ecab29378cbfdc_r.jpg?source=1940ef5c&quot; alt=&quot;preview&quot;&gt;&lt;/p&gt;
+</summary>
+    
+    
+    
+    <category term="ML" scheme="https://foreveryoungjay.github.io/categories/ML/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>逻辑回归</title>
@@ -396,13 +417,13 @@
     <published>2021-04-17T14:50:03.000Z</published>
     <updated>2021-04-18T02:05:24.705Z</updated>
     
-    <content type="html"><![CDATA[<p>此网站仅为学习过程中的笔记，供大家分享。</p><p><strong>一緒に頑張りましょう！</strong></p><p><strong>What I’m doing right now, I’m chasing perfection.</strong></p><p>如有疑问请发邮件到 <a href="mailto:&#49;&#x33;&#x30;&#x31;&#x34;&#50;&#x30;&#52;&#50;&#x37;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#49;&#x33;&#x30;&#x31;&#x34;&#50;&#x30;&#52;&#50;&#x37;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a></p><p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&fm=26&gp=0.jpg" alt="img"></p>]]></content>
+    <content type="html"><![CDATA[<p>此网站仅为学习过程中的笔记，供大家分享。</p><p><strong>一緒に頑張りましょう！</strong></p><p><strong>What I’m doing right now, I’m chasing perfection.</strong></p><p>如有疑问请发邮件到 <a href="mailto:&#x31;&#x33;&#x30;&#49;&#x34;&#x32;&#48;&#52;&#50;&#55;&#64;&#113;&#x71;&#46;&#99;&#111;&#x6d;">&#x31;&#x33;&#x30;&#49;&#x34;&#x32;&#48;&#52;&#50;&#55;&#64;&#113;&#x71;&#46;&#99;&#111;&#x6d;</a></p><p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&fm=26&gp=0.jpg" alt="img"></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;此网站仅为学习过程中的笔记，供大家分享。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一緒に頑張りましょう！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;What I’m doing right now, I’m chasing perfection.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如有疑问请发邮件到 &lt;a href=&quot;mailto:&amp;#49;&amp;#x33;&amp;#x30;&amp;#x31;&amp;#x34;&amp;#50;&amp;#x30;&amp;#52;&amp;#50;&amp;#x37;&amp;#x40;&amp;#x71;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#49;&amp;#x33;&amp;#x30;&amp;#x31;&amp;#x34;&amp;#50;&amp;#x30;&amp;#52;&amp;#50;&amp;#x37;&amp;#x40;&amp;#x71;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如有疑问请发邮件到 &lt;a href=&quot;mailto:&amp;#x31;&amp;#x33;&amp;#x30;&amp;#49;&amp;#x34;&amp;#x32;&amp;#48;&amp;#52;&amp;#50;&amp;#55;&amp;#64;&amp;#113;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x31;&amp;#x33;&amp;#x30;&amp;#49;&amp;#x34;&amp;#x32;&amp;#48;&amp;#52;&amp;#50;&amp;#55;&amp;#64;&amp;#113;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&amp;fm=26&amp;gp=0.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
 </summary>
     
