@@ -10,6 +10,15 @@
       </categories>
   </entry>
   <entry>
+    <title>Gaussian Filter &amp; Gaussian Pyramid</title>
+    <url>/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_38131594/article/details/80758734">https://blog.csdn.net/qq_38131594/article/details/80758734</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java没有main方法如何运行</title>
     <url>/2021/04/22/Java%E6%B2%A1%E6%9C%89main%E6%96%B9%E6%B3%95%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C/</url>
     <content><![CDATA[<p><strong>在该方法中构造main函数</strong></p>
@@ -17,9 +26,28 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Gaussian Filter &amp; Gaussian Pyramid</title>
-    <url>/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_38131594/article/details/80758734">https://blog.csdn.net/qq_38131594/article/details/80758734</a></p>
+    <title>Laplacian滤波器并用于图像锐化</title>
+    <url>/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</url>
+    <content><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
+<p>拉普拉斯滤波器卷积核表示</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
+<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
+<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
+<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
+<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
+<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Lucas-Kanade 追踪算法</title>
+    <url>/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/u012554092/article/details/78128795">https://blog.csdn.net/u012554092/article/details/78128795</a></p>
+<p><a href="https://blog.csdn.net/u014568921/article/details/46638557">https://blog.csdn.net/u014568921/article/details/46638557</a></p>
+<p>算法实现：</p>
+<p><a href="https://blog.csdn.net/zhzhji440/article/details/43866695">https://blog.csdn.net/zhzhji440/article/details/43866695</a></p>
 ]]></content>
       <categories>
         <category>CV</category>
@@ -79,39 +107,14 @@
       </categories>
   </entry>
   <entry>
-    <title>Laplacian滤波器并用于图像锐化</title>
-    <url>/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</url>
-    <content><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
-<p>拉普拉斯滤波器卷积核表示</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
-<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
-<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
-<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
-<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
-<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>What&#39;s this website</title>
     <url>/2021/04/17/What-s-this-website/</url>
     <content><![CDATA[<p>此网站仅为学习过程中的笔记，供大家分享。</p>
 <p><strong>一緒に頑張りましょう！</strong></p>
 <p><strong>What I’m doing right now, I’m chasing perfection.</strong></p>
-<p>如有疑问请发邮件到 <a href="mailto:&#49;&#51;&#48;&#x31;&#x34;&#x32;&#48;&#52;&#x32;&#55;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;">&#49;&#51;&#48;&#x31;&#x34;&#x32;&#48;&#52;&#x32;&#55;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;</a></p>
+<p>如有疑问请发邮件到 <a href="mailto:&#49;&#x33;&#x30;&#x31;&#x34;&#50;&#x30;&#52;&#50;&#x37;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#49;&#x33;&#x30;&#x31;&#x34;&#50;&#x30;&#52;&#50;&#x37;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a></p>
 <p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&fm=26&gp=0.jpg" alt="img"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>图像校正(Image Rectification)</title>
-    <url>/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
   </entry>
   <entry>
     <title>active learning</title>
@@ -136,6 +139,49 @@
 ]]></content>
   </entry>
   <entry>
+    <title>cluster聚合层次聚类算法</title>
+    <url>/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p><img src="https://pic4.zhimg.com/v2-05343ed3ff48cec83244ab64760acdeb_r.jpg" alt="img"></p>
+<p>层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。</p>
+<p>根据聚类簇之间距离的计算方法的不同，层次聚类算法可以大致分为：单链接（Single-link）算法，全链接算法（complete-link）或均链接算法（average-link）。单链接算法用两个聚类簇中最近的样本距离作为两个簇之间的距离；而全链接使用计算两个聚类簇中最远的样本距离；均链接算法中两个聚类之间的距离由两个簇中所有的样本共同决定。</p>
+<p><img src="https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg" alt="img"></p>
+<p>“自底向上”的聚合层次聚类算法</p>
+<p>（1）计算任意两个数据之间的距离得到一个相似度矩阵（proximity matrix），并把每一个单一的数据看作是一个聚类；</p>
+<p>（2）查找相似度矩阵中距离最小的两个聚类，把他们聚合为一个新的聚类，然后根据这个新的聚类重新计算相似度矩阵；</p>
+<p>（3）重复（2）直到所有的数据都被归入到一个聚类中。</p>
+<p><img src="https://image.jiqizhixin.com/uploads/editor/ebee159c-0067-4ecc-af7a-2559c9e5f781/1523979971408.jpg" alt="img"></p>
+<p>“自顶向下”的分拆（divisive）策略则与之相反。</p>
+<p>可以使用单链接或者全链接的的方式来聚类簇之间的距离，会使得聚类的最终结果有所不同。</p>
+<p>针对层次聚类不适于解决大量数据的问题，Zhang 等人提出了一种基于聚类特征树（Clustering Feature Tree）的层次聚类算法：BIRCH算法（Balanced Iterative Reducing and Clustering Using Hierarchies）。BIRCH算法实现了只需要一次对数据集的遍历就可以完成聚类。其聚类的主要过程就是将所有数据依次插入构建聚类特征树的过程，而树上的每一个节点所包含的数据构成了一个对应的聚类簇。同时对于包含数据极少的节点我们可以认为它是异常点从而进行去除。</p>
+<p>层次聚类的另外一个变种算法是名为变色龙算法（Chameleon）。它是由George Karypis 教授提出的一种基于动态建模（Dynamic modeling）思想的层次聚类算法。该算法通过计算两个聚类簇之间的相似度和互连性从而克服CURE和ROCK等算法的缺点。变色龙算法首先将所有的数据根据他们之间的距离划分成众多的小的簇，通过计算相近簇之间的相似度和互连性不断合并形成大的聚类簇。</p>
+<p>k-means</p>
+<p>注意不要混淆K-近邻算法和K均值聚类。 K-近邻算法是一种分类算法，也是监督学习的一个子集。 K-means是一种聚类算法，也是非监督学习的一个子集。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/104355127">https://zhuanlan.zhihu.com/p/104355127</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>图像校正(Image Rectification)</title>
+    <url>/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>对极几何</title>
+    <url>/2021/05/17/%E5%AF%B9%E6%9E%81%E5%87%A0%E4%BD%95/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/clarenceliang/p/6704970.html">https://www.cnblogs.com/clarenceliang/p/6704970.html</a></p>
+<p><a href="https://blog.csdn.net/tina_ttl/article/details/52749542">https://blog.csdn.net/tina_ttl/article/details/52749542</a></p>
+<p><a href="http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml">http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/79845576">https://zhuanlan.zhihu.com/p/79845576</a></p>
+<p><a href="https://blog.csdn.net/ssw_1990/article/details/53355572">https://blog.csdn.net/ssw_1990/article/details/53355572</a></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+      </categories>
+  </entry>
+  <entry>
     <title>快速补全代码</title>
     <url>/2021/04/22/%E5%BF%AB%E9%80%9F%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/</url>
     <content><![CDATA[<p><strong>将鼠标放在接口的名称处按 Alt+Enter 键</strong></p>
@@ -158,18 +204,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Lucas-Kanade 追踪算法</title>
-    <url>/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/u012554092/article/details/78128795">https://blog.csdn.net/u012554092/article/details/78128795</a></p>
-<p><a href="https://blog.csdn.net/u014568921/article/details/46638557">https://blog.csdn.net/u014568921/article/details/46638557</a></p>
-<p>算法实现：</p>
-<p><a href="https://blog.csdn.net/zhzhji440/article/details/43866695">https://blog.csdn.net/zhzhji440/article/details/43866695</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
     <title>随机抽样一致算法（RANdom SAmple Consensus,RANSAC）</title>
     <url>/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/</url>
     <content><![CDATA[<p>一、RANSAC介绍<br>   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该算法核心思想就是随机性和假设性，随机性是根据正确数据出现概率去随机选取抽样数据，根据大数定律，随机性模拟可以近似得到正确结果。假设性是假设选取出的抽样数据都是正确数据，然后用这些正确数据通过问题满足的模型，去计算其他点，然后对这次结果进行一个评分。<br>二、算法基本思想<br>（1）要得到一个直线模型，需要两个点唯一确定一个直线方程。所以第一步随机选择两个点。<br>（2）通过这两个点，可以计算出这两个点所表示的模型方程y=ax+b。<br>（3）将所有的数据点套到这个模型中计算误差。<br>（4）找到所有满足误差阈值的点。<br>（5）然后我们再重复（1）~（4）这个过程，<strong>直到达到一定迭代次数后，选出那个被支持的最多的模型，作为问题的解</strong>。如下图所示</p>
@@ -180,40 +214,6 @@
       <categories>
         <category>CV</category>
       </categories>
-  </entry>
-  <entry>
-    <title>对极几何</title>
-    <url>/2021/05/17/%E5%AF%B9%E6%9E%81%E5%87%A0%E4%BD%95/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/clarenceliang/p/6704970.html">https://www.cnblogs.com/clarenceliang/p/6704970.html</a></p>
-<p><a href="https://blog.csdn.net/tina_ttl/article/details/52749542">https://blog.csdn.net/tina_ttl/article/details/52749542</a></p>
-<p><a href="http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml">http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/79845576">https://zhuanlan.zhihu.com/p/79845576</a></p>
-<p><a href="https://blog.csdn.net/ssw_1990/article/details/53355572">https://blog.csdn.net/ssw_1990/article/details/53355572</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>cluster聚合层次聚类算法</title>
-    <url>/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p><img src="https://pic4.zhimg.com/v2-05343ed3ff48cec83244ab64760acdeb_r.jpg" alt="img"></p>
-<p>层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。</p>
-<p>根据聚类簇之间距离的计算方法的不同，层次聚类算法可以大致分为：单链接（Single-link）算法，全链接算法（complete-link）或均链接算法（average-link）。单链接算法用两个聚类簇中最近的样本距离作为两个簇之间的距离；而全链接使用计算两个聚类簇中最远的样本距离；均链接算法中两个聚类之间的距离由两个簇中所有的样本共同决定。</p>
-<p><img src="https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg" alt="img"></p>
-<p>“自底向上”的聚合层次聚类算法</p>
-<p>（1）计算任意两个数据之间的距离得到一个相似度矩阵（proximity matrix），并把每一个单一的数据看作是一个聚类；</p>
-<p>（2）查找相似度矩阵中距离最小的两个聚类，把他们聚合为一个新的聚类，然后根据这个新的聚类重新计算相似度矩阵；</p>
-<p>（3）重复（2）直到所有的数据都被归入到一个聚类中。</p>
-<p><img src="https://image.jiqizhixin.com/uploads/editor/ebee159c-0067-4ecc-af7a-2559c9e5f781/1523979971408.jpg" alt="img"></p>
-<p>“自顶向下”的分拆（divisive）策略则与之相反。</p>
-<p>可以使用单链接或者全链接的的方式来聚类簇之间的距离，会使得聚类的最终结果有所不同。</p>
-<p>针对层次聚类不适于解决大量数据的问题，Zhang 等人提出了一种基于聚类特征树（Clustering Feature Tree）的层次聚类算法：BIRCH算法（Balanced Iterative Reducing and Clustering Using Hierarchies）。BIRCH算法实现了只需要一次对数据集的遍历就可以完成聚类。其聚类的主要过程就是将所有数据依次插入构建聚类特征树的过程，而树上的每一个节点所包含的数据构成了一个对应的聚类簇。同时对于包含数据极少的节点我们可以认为它是异常点从而进行去除。</p>
-<p>层次聚类的另外一个变种算法是名为变色龙算法（Chameleon）。它是由George Karypis 教授提出的一种基于动态建模（Dynamic modeling）思想的层次聚类算法。该算法通过计算两个聚类簇之间的相似度和互连性从而克服CURE和ROCK等算法的缺点。变色龙算法首先将所有的数据根据他们之间的距离划分成众多的小的簇，通过计算相近簇之间的相似度和互连性不断合并形成大的聚类簇。</p>
-<p>k-means</p>
-<p>注意不要混淆K-近邻算法和K均值聚类。 K-近邻算法是一种分类算法，也是监督学习的一个子集。 K-means是一种聚类算法，也是非监督学习的一个子集。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/104355127">https://zhuanlan.zhihu.com/p/104355127</a></p>
-]]></content>
   </entry>
   <entry>
     <title>逻辑回归</title>
