@@ -226,7 +226,20 @@
 <p><img src="https://pic2.zhimg.com/80/v2-b15289fd1162a807e11949e5396c7989_1440w.jpg" alt="img"></p>
 <p>Logistic 分布是由其位置和尺度参数定义的连续分布。Logistic 分布的形状与正态分布的形状相似，但是 Logistic 分布的尾部更长，所以我们可以使用 Logistic 分布来建模比正态分布具有更长尾部和更高波峰的数据分布。在深度学习中常用到的 Sigmoid 函数就是 Logistic 的分布函数在 <img src="https://www.zhihu.com/equation?tex=%5Cmu=0,+%5Cgamma=1" alt="[公式]"> 的特殊形式。</p>
 <h3 id="1-2-Logistic-回归"><a href="#1-2-Logistic-回归" class="headerlink" title="1.2 Logistic 回归"></a>1.2 Logistic 回归</h3><p>之前说到 Logistic 回归主要用于分类问题，我们以二分类为例，对于所给数据集假设存在这样的一条直线可以将数据完成线性可分。</p>
+<p>1.</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTI1MTA5Ni8yMDE3MTAvMTI1MTA5Ni0yMDE3MTAyMDIwMzc1ODI1Ni0xNjA0MzQ3MzgxLnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>于是我们得到了这样的关系式：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTI1MTA5Ni8yMDE3MTAvMTI1MTA5Ni0yMDE3MTAyMDIxMDE0NzA4NC0xMTk2OTM5MjUxLnBuZw?x-oss-process=image/format,png" alt="img"></p>
 <p><img src="https://pic3.zhimg.com/v2-34f3997ae1975cd620a8514e3954fa9e_r.jpg" alt="img"></p>
+<p>根据上面得到的关系式，我们可以得到：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTI1MTA5Ni8yMDE3MTAvMTI1MTA5Ni0yMDE3MTAyMDIxMTYyMjExNS0yMDg5OTM1MzMxLnBuZw?x-oss-process=image/format,png" alt="img">　　</p>
+<p>而我们再图像上画出得到：</p>
+<p>　　<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTI1MTA5Ni8yMDE3MTAvMTI1MTA5Ni0yMDE3MTAyMDIxMTgyNDMwMi0xMTAxMzQ1Mjg4LnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>这时，直线上方所有样本都是正样本y=1，直线下方所有样本都是负样本y=0。因此我们可以把这条直线成为决策边界。</p>
+<p>同理，对于非线性可分的情况，我们只需要引入多项式特征就可以很好的去做分类预测，如下图：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE3LmNuYmxvZ3MuY29tL2Jsb2cvMTI1MTA5Ni8yMDE3MTAvMTI1MTA5Ni0yMDE3MTAyMDIxMjk1NTI3MS0xMjIzNTU4Njg2LnBuZw?x-oss-process=image/format,png" alt="img"></p>
+<p>　　</p>
+<p>值得注意的一点，决策边界并不是训练集的属性，而是假设本身和参数的属性。因为训练集不可以定义决策边界，它只负责拟合参数；而只有参数确定了，决策边界才得以确定。</p>
 <p>决策边界可以表示为 <img src="https://www.zhihu.com/equation?tex=w_1x_1+w_2x_2+b=0" alt="[公式]"> ，假设某个样本点 <img src="https://www.zhihu.com/equation?tex=h_w(x)+=+w_1x_1+w_2x_2+b+%3E+0" alt="[公式]"> 那么可以判断它的类别为 1，这个过程其实是感知机。</p>
 <p>Logistic 回归还需要加一层，它要找到分类概率 P(Y=1) 与输入向量 x 的直接关系，然后通过比较概率值来判断类别。</p>
 <p>考虑二分类问题，给定数据集</p>
@@ -350,10 +363,10 @@
 <p><img src="https://pic1.zhimg.com/v2-d93c4826068dbca6030cb7ca895102a0_r.jpg" alt="img"></p>
 <p>所以并行 LR 实际上就是在求解损失函数最优解的过程中，针对寻找损失函数下降方向中的梯度方向计算作了并行化处理，而在利用梯度确定下降方向的过程中也可以采用并行化。</p>
 <h2 id="2-与其他模型的对比"><a href="#2-与其他模型的对比" class="headerlink" title="2. 与其他模型的对比"></a>2. 与其他模型的对比</h2><h3 id="2-1-与线性回归"><a href="#2-1-与线性回归" class="headerlink" title="2.1 与线性回归"></a>2.1 与线性回归</h3><p>逻辑回归是在线性回归的基础上加了一个 Sigmoid 函数（非线形）映射，使得逻辑回归称为了一个优秀的分类算法。本质上来说，两者都属于广义线性模型，但他们两个要解决的问题不一样，逻辑回归解决的是分类问题，输出的是离散值，线性回归解决的是回归问题，输出的连续值。</p>
-<p>我们需要明确 Sigmoid 函数到底起了什么作用：</p>
+<p><strong>我们需要明确 Sigmoid 函数到底起了什么作用：</strong></p>
 <ul>
-<li>线性回归是在实数域范围内进行预测，而分类范围则需要在 [0,1]，逻辑回归减少了预测范围；</li>
-<li>线性回归在实数域上敏感度一致，而逻辑回归在 0 附近敏感，在远离 0 点位置不敏感，这个的好处就是模型更加关注分类边界，可以增加模型的鲁棒性。</li>
+<li><strong>线性回归是在实数域范围内进行预测，而分类范围则需要在 [0,1]，逻辑回归减少了预测范围；</strong></li>
+<li><strong>线性回归在实数域上敏感度一致，而逻辑回归在 0 附近敏感，在远离 0 点位置不敏感，这个的好处就是模型更加关注分类边界，可以增加模型的鲁棒性。</strong></li>
 </ul>
 <h3 id="2-2-与最大熵模型"><a href="#2-2-与最大熵模型" class="headerlink" title="2.2 与最大熵模型"></a>2.2 与最大熵模型</h3><p>逻辑回归和最大熵模型本质上没有区别，最大熵在解决二分类问题时就是逻辑回归，在解决多分类问题时就是多项逻辑回归。</p>
 <p>首先进行符号定义：</p>
