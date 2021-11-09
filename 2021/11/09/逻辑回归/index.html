@@ -1,224 +1,354 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Fourier transform and Gabor transform</title>
-    <url>/2021/04/23/Fourier-transform-and-Gabor-transform/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/emouse/p/3611256.html">https://www.cnblogs.com/emouse/p/3611256.html</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java没有main方法如何运行</title>
-    <url>/2021/04/22/Java%E6%B2%A1%E6%9C%89main%E6%96%B9%E6%B3%95%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C/</url>
-    <content><![CDATA[<p><strong>在该方法中构造main函数</strong></p>
-<p>Sources 一般用于标注类似 src 这种可编译目录。有时候我们不单单项目的 src 目录要可编译，还有其他一些特别的目录也许我们也要作为可编译的目录，就需要对该目录进行此标注。只有 Sources 这种可编译目录才可以新建 Java 类和包，这一点需要牢记。<br>Tests 一般用于标注可编译的单元测试目录。在规范的 maven 项目结构中，顶级目录是 src，maven 的 src 我们是不会设置为 Sources 的，而是在其子目录 main 目录下的 java 目录，我们会设置为 Sources。而单元测试的目录是 src - test - java，这里的 java 目录我们就会设置为 Tests，表示该目录是作为可编译的单元测试目录。一般这个和后面几个我们都是在 maven 项目下进行配置的，但是我这里还是会先说说。从这一点我们也可以看出 IntelliJ IDEA 对 maven 项目的支持是比彻底的。<br>Resources 一般用于标注资源文件目录。在 maven 项目下，资源目录是单独划分出来的，其目录为：src - main -resources，这里的 resources 目录我们就会设置为 Resources，表示该目录是作为资源目录。资源目录下的文件是会被编译到输出目录下的。<br>Test Resources 一般用于标注单元测试的资源文件目录。在 maven 项目下，单元测试的资源目录是单独划分出来的，其目录为：src - test -resources，这里的 resources 目录我们就会设置为 Test Resources，表示该目录是作为单元测试的资源目录。资源目录下的文件是会被编译到输出目录下的。<br>Excluded 一般用于标注排除目录。被排除的目录不会被 IntelliJ IDEA 创建索引，相当于被 IntelliJ IDEA 废弃，该目录下的代码文件是不具备代码检查和智能提示等常规代码功能。<br>通过上面的介绍，我们知道对于非 maven 项目我们只要会设置 src 即可。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Gaussian Filter &amp; Gaussian Pyramid</title>
-    <url>/2021/05/17/Gaussian-Filter-Gaussian-Pyramid/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_38131594/article/details/80758734">https://blog.csdn.net/qq_38131594/article/details/80758734</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>MVC模式</title>
-    <url>/2021/04/23/MVC%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<p>MVC 模式代表 Model-View-Controller（模型-视图-控制器） 模式。这种模式用于应用程序的分层开发。</p>
-<ul>
-<li><p><strong>Model（模型）</strong> - 模型代表一个存取数据的对象或 JAVA POJO。它也可以带有逻辑，在数据变化时更新控制器。模型表示企业数据和业务规则。在MVC的三个部件中，模型拥有最多的处理任务。例如它可能用像<a href="https://baike.baidu.com/item/EJB">EJB</a>s和ColdFusion Components这样的构件对象来处理数据库，被模型返回的数据是中立的，就是说模型与数据格式无关，这样一个模型能为多个视图提供数据，由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。</p>
-</li>
-<li><p><strong>View（视图）</strong> - 视图代表模型包含的数据的可视化。</p>
-<p>视图是用户看到并与之交互的界面。对老式的Web应用程序来说，视图就是由<a href="https://baike.baidu.com/item/HTML">HTML</a>元素组成的界面，在新式的Web应用程序中，<a href="https://baike.baidu.com/item/HTML">HTML</a>依旧在视图中扮演着重要的角色，但一些新的技术已层出不穷，它们包括[Adobe Flash](<a href="https://baike.baidu.com/item/Adobe">https://baike.baidu.com/item/Adobe</a> Flash)和像<a href="https://baike.baidu.com/item/XHTML">XHTML</a>，<a href="https://baike.baidu.com/item/XML">XML</a>/<a href="https://baike.baidu.com/item/XSL">XSL</a>,<a href="https://baike.baidu.com/item/WML">WML</a>等一些标识语言和[Web services](<a href="https://baike.baidu.com/item/Web">https://baike.baidu.com/item/Web</a> services).</p>
-<p>MVC好处是它能为应用程序处理很多不同的<a href="https://baike.baidu.com/item/%E8%A7%86%E5%9B%BE">视图</a>。在视图中其实没有真正的处理发生，不管这些数据是联机存储的还是一个雇员列表，作为视图来讲，它只是作为一种输出数据并允许用户操纵的方式。</p>
-</li>
-<li><p><strong>Controller（控制器）</strong> - 控制器作用于模型和视图上。它控制数据流向模型对象，并在数据变化时更新视图。它使视图与模型分离开。控制器接受用户的输入并调用模型和视图去完成用户的需求，所以当单击Web页面中的超链接和发送<a href="https://baike.baidu.com/item/HTML%E8%A1%A8%E5%8D%95">HTML表单</a>时，控制器本身不输出任何东西和做任何处理。它只是接收请求并决定调用哪个模型构件去处理请求，然后再确定用哪个视图来显示返回的数据。</p>
-</li>
-</ul>
-<p><img src="https://images2015.cnblogs.com/blog/811883/201704/811883-20170423150024694-1439613206.jpg" alt="img"></p>
-<p><img src="https://images2015.cnblogs.com/blog/811883/201704/811883-20170423150019101-1710764799.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Statement和PrepareStatement的区别详解</title>
-    <url>/2021/04/21/Statement%E5%92%8CPrepareStatement%E7%9A%84%E5%8C%BA%E5%88%AB%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p>联系：<br>1.PreparedStatement继承自Statement，两者都是接口。<br>2.内部都要建立类似于Sockt连接，效率都不是特别高。</p>
-<p>从资源利用和安全的角度区分两者的不同：</p>
-<p>关于批处理时如何选择，以数据量大小位标准分三种情况：<br>1）量比较小，二者皆差别不大。<br>2）量比较多，在PreparedStatement预编译空间范围之内，选择PreparedStatement，因为其只预编译一次sql语句。<br>3）量特别大，使用Statement，因为PrepareStatement的预编译空间有限，当数据量特别大时，会发生异常。<br>特殊情况还有：执行不同的sql语句，批处理…等等 ，可以从消耗资源的角度再次分析。</p>
-<p>批处理综合分析：<br>使用PreparedStatement代码演示：<br>在批处理过程中包含的sql语句的主干部分(sql语句)必须相同，改变的只是参数，因此编译一次sql语句即可，极大提高性能，但其主干必须相同则影响了灵活性。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"> 2         Connection conn = null;</span><br><span class="line"> 3         Statement stat = null;</span><br><span class="line"> 4         PreparedStatement ps = null;</span><br><span class="line"> 5         </span><br><span class="line"> 6         try &#123;</span><br><span class="line"> 7             Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br><span class="line"> 8             conn = DriverManager.getConnection(&quot;jdbc:mysql:///mydb5&quot;,&quot;root&quot;,&quot;admin&quot;);</span><br><span class="line"> 9             //开始事务</span><br><span class="line">10             conn.setAutoCommit(false);</span><br><span class="line">11             String sql = &quot;insert into tb_batch values (null,?)&quot;;</span><br><span class="line">12             ps = conn.prepareStatement(sql);</span><br><span class="line">13             for(int i=2000;i&lt;3000;i++)&#123;</span><br><span class="line">14                 ps.setString(1, &quot;tong&quot;+i);</span><br><span class="line">15                 ps.addBatch();</span><br><span class="line">16             &#125;</span><br><span class="line">17             ps.executeBatch();</span><br><span class="line">18             //提交事务</span><br><span class="line">19             conn.commit();</span><br><span class="line">22         &#125; catch (Exception e) &#123;</span><br><span class="line">23             e.printStackTrace();</span><br><span class="line">24         &#125;finally&#123;</span><br><span class="line">25             JDBCutils.closeResou(conn, ps, null);</span><br><span class="line">26         &#125;     </span><br><span class="line">29     &#125;</span><br></pre></td></tr></table></figure>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<p>使用Statement代码演示：<br>可以包含结构不同的sql语句，灵活性得到提高，但没有预编译机制, 效率低下；并且你会发现发送的sql语句主干部分相同，只是参数不同， 但是主干部分每次都需要重复写入，极为麻烦。.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Connection conn = null;</span><br><span class="line"> 4         Statement stat = null;</span><br><span class="line"> 5         //注册驱动和连接数据库</span><br><span class="line"> 6         conn = JDBCutils.getConn();</span><br><span class="line"> 7         try &#123;</span><br><span class="line"> 8             stat = conn.createStatement();</span><br><span class="line"> 9             stat.addBatch(&quot;drop database if exists mydb5&quot;);</span><br><span class="line">10             stat.addBatch(&quot;create database mydb5&quot;);</span><br><span class="line">13             stat.addBatch(&quot;insert into tb_batch values(null,&#x27;a&#x27;)&quot;);</span><br><span class="line">14             stat.addBatch(&quot;insert into tb_batch values(null,&#x27;bbb&#x27;)&quot;);</span><br><span class="line">15             stat.addBatch(&quot;insert into tb_batch values(null,&#x27;cccccc&#x27;)&quot;);</span><br><span class="line">16             stat.executeBatch();     </span><br><span class="line">19         &#125; catch (Exception e) &#123;</span><br><span class="line">20             e.printStackTrace();</span><br><span class="line">21         &#125;finally&#123;</span><br><span class="line">22             JDBCutils.closeResou(conn, stat, null);</span><br><span class="line">23         &#125;</span><br><span class="line">24         </span><br></pre></td></tr></table></figure>
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"foreveryoungjay.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1. 模型介绍Logistic Regression 虽然被称为回归，但其实际上是分类模型，并常用于二分类。Logistic Regression 因其简单、可并行化、可解释强深受工业界喜爱。 Logistic 回归的本质是：假设数据服从这个分布，然后使用极大似然估计做参数的估计。 1.1 Logistic 分布Logistic 分布是一种连续型的概率分布，其分布函数和密度函数分别为：  其中，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逻辑回归">
+<meta property="og:url" content="https://foreveryoungjay.github.io/2021/11/09/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/index.html">
+<meta property="og:site_name" content="YANG JIYI">
+<meta property="og:description" content="1. 模型介绍Logistic Regression 虽然被称为回归，但其实际上是分类模型，并常用于二分类。Logistic Regression 因其简单、可并行化、可解释强深受工业界喜爱。 Logistic 回归的本质是：假设数据服从这个分布，然后使用极大似然估计做参数的估计。 1.1 Logistic 分布Logistic 分布是一种连续型的概率分布，其分布函数和密度函数分别为：  其中，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F(x)+=+P(X+%5Cleq+x)=%5Cfrac%7B1%7D%7B1+e%5E%7B-(x-%5Cmu)/%5Cgamma%7D%7D+%5C%5C+f(x)+=+F%5E%7B%27%7D(X+%5Cleq+x)=%5Cfrac%7Be%5E%7B-(x-%5Cmu)/%5Cgamma%7D%7D%7B%5Cgamma(1+e%5E%7B-(x-%5Cmu)/%5Cgamma%7D)%5E%7B2%7D%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cmu">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cgamma%3E0">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-b15289fd1162a807e11949e5396c7989_1440w.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cmu=0,+%5Cgamma=1">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-34f3997ae1975cd620a8514e3954fa9e_r.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w_1x_1+w_2x_2+b=0">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=h_w(x)+=+w_1x_1+w_2x_2+b+%3E+0">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+D=%7B(x_%7B1%7D,+y_%7B1%7D),(x_%7B2%7D,y_%7B2%7D),%5Ccdots,(x_%7BN%7D,+y_%7BN%7D)%7D,+x_%7Bi%7D+%5Csubseteq+R%5E%7Bn%7D,+y_%7Bi%7D+%5Cin+%7B0,1%7D,i=1,2,%5Ccdots,N+++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w%5E%7BT%7Dx+b">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=p(Y=1%7Cx)">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w+%5Cne+0">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w%5E%7BT%7Dx+b">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=R">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=p(y=1+%7C+x)=%5Cbegin%7Bcases%7D+0,&+z%5Clt+0+%5C%5C+0.5,&+z+=+0%5C%5C+1,&+z%5Cgt+0%5C+%5Cend%7Bcases%7D+,%5Cquad+z=w%5ET+x+b++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+y+=+%5Cfrac%7B1%7D%7B1+e%5E%7B-(w%5E%7BT%7D+x+++b)%7D%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+ln+%5Cfrac%7By%7D%7B1%E2%88%92y%7D+=+w%5E%7BT%7Dx+++b+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+ln(odds)+=+ln+%5Cfrac%7By%7D%7B1%E2%88%92y%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w%5E%7BT%7D+x+++b+=+ln%5Cfrac%7BP(Y=1%7Cx)%7D%7B1-P(Y=1%7Cx)%7D+%5C%5C+P(Y=1%7Cx)+=+%5Cfrac%7B1%7D%7B1+e%5E%7B-(w%5E%7BT%7D+x+++b)%7D%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w%5E%7BT%7Dx+b">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=P(Y=1%7Cx)+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+P(Y=1%7Cx)+&=+p(x)+%5C%5C++P(Y=0%7Cx)+&=+1-+p(x)+%5Cend%7Baligned%7D%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=L(w)=%5Cprod%5Bp(x_%7Bi%7D)%5D%5E%7By_%7Bi%7D%7D%5B1-p(x_%7Bi%7D)%5D%5E%7B1-y_%7Bi%7D%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cbegin%7Baligned%7D+L(w)&=%5Csum%5By_%7Bi%7Dlnp(x_%7Bi%7D)+(1-y_%7Bi%7D)ln(1-p(x_%7Bi%7D))%5D+%5C%5C+&=%5Csum%5By_%7Bi%7Dln%5Cfrac%7Bp(x_%7Bi%7D)%7D%7B1-p(x_%7Bi%7D)%7D+ln(1-p(x_%7Bi%7D))%5D++%5C%5C+&=%5Csum%5By_%7Bi%7D(w+%5Ccdot+x_%7Bi%7D)+-+ln(1+e%5E%7Bw+%5Ccdot+x_%7Bi%7D%7D)%5D+%5Cend%7Baligned%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=J(w)=-%5Cfrac%7B1%7D%7BN%7DlnL(w)+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=J(w)+=++-%5Cfrac%7B1%7D%7Bn%7D(%5Csum_%7Bi=1%7D%5En(y_ilnp(x_i)+(1-y_i)ln(1-p(x_i)))+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+g_i+=+%5Cfrac%7B%5Cpartial+J(w)%7D+%7B%5Cpartial+w_i%7D+=(p(x_i)-y_i)x_i+%5C%5C+w%5E%7Bk+1%7D_i=w%5Ek_i-%5Calpha+g_i">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%7C%7CJ(w%5E%7Bk+1%7D)%E2%88%92J(w%5Ek)%7C%7C+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w%5Ek">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cvarphi+(w)+=+J(w%5Ek)+++J%5E%7B%27%7D(w%5Ek)(w-w%5Ek)+%5Cfrac%7B1%7D%7B2%7DJ%5E%7B%22%7D(w%5Ek)(w-w%5Ek)%5E2++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%CF%86%5E%7B%27%7D(w)=0">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+w%5E%7Bk+1%7D=w%5E%7Bk%7D%E2%88%92%5Cfrac%7BJ%5E%7B%27%7D(w%5Ek)%7D%7BJ%5E%7B%22%7D(w%5Ek)%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w%5E%7Bk+1%7D+=+w%5E%7Bk%7D+-+%5Cfrac%7BJ%5E%7B%27%7D(w%5E%7Bk%7D)%7D%7BJ%5E%7B%22%7D(w%5E%7Bk%7D)%7D+=+w%5E%7Bk%7D+-+H_%7Bk%7D%5E%7B-1%7D%5Ccdot+g_%7Bk%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=H_%7Bk%7D%5E%7B-1%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=H_%7Bmn%7D+=+%5Cfrac+%7B%5Cpartial%5E2+J(w)%7D+%7B%5Cpartial+w_%7Bm%7D+%5Cpartial+w_%7Bn%7D%7D+=h_%7Bw%7D(x%5E%7B(i)%7D)(1-p_%7Bw%7D(x%5E%7B(i)%7D))x%5E%7B(i)%7D_mx%5E%7B(i)%7D_n++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%CE%A6(w)=%7C%7Cx%7C%7C_1">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%CE%A6(w)=%7C%7Cx%7C%7C_2+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f(w%7C%5Cmu,b)=%5Cfrac%7B1%7D%7B2b%7D%5Cexp+%5Cleft+(+-%5Cfrac%7B%7Cw-%5Cmu%7C%7D%7Bb%7D%5Cright+)%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cbegin%7Baligned%7D+L(w)&=P(y%7Cw,x)P(w)%5C%5C+&=%5Cprod_%7Bi=1%7D%5ENp(x_i)%5E%7By_i%7D(1-p(x_i))%5E%7B1-y_i%7D%5Cprod_%7Bj=1%7D%5Ed+%5Cfrac%7B1%7D%7B2b%7D%5Cexp+%5Cleft+(%7B-%5Cfrac%7B%7Cw_j%7C%7D%7Bb%7D%7D+%5Cright+)+%5Cend%7Baligned%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=-%5Cln+L(w)=-%5Csum_i+%5By_i%5Cln+p(x_i)+(1-y_i)ln(1-p(x_i))%5D+%5Cfrac%7B1%7D%7B2b%5E2%7D%5Csum_j%7Cw_j%7C++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f(w%7C%5Cmu,%5Csigma)=%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%5Csigma%7D%5Cexp+%5Cleft+(+-%5Cfrac%7B(w-%5Cmu)%5E2%7D%7B2%5Csigma%5E2%7D%5Cright+)++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+L(w)&=P(y%7Cw,x)P(w)%5C%5C+&=%5Cprod_%7Bi=1%7D%5ENp(x_i)%5E%7By_i%7D(1-p(x_i))%5E%7B1-y_i%7D%5Cprod_%7Bj=1%7D%5Ed+%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%5Csigma%7D%5Cexp+%5Cleft+(%7B-%5Cfrac%7Bw_j%5E2%7D%7B2%5Csigma%5E2%7D%7D+%5Cright+)%5C%5C+&=%5Cprod_%7Bi=1%7D%5ENp(x_i)%5E%7By_i%7D(1-p(x_i))%5E%7B1-y_i%7D+%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%5Csigma%7D%5Cexp+%5Cleft+(%7B-%5Cfrac%7Bw%5ETw%7D%7B2%5Csigma%5E2%7D%7D+%5Cright+)+%5Cend%7Baligned%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=-%5Cln+L(w)=-%5Csum_i+%5By_i%5Cln+p(x_i)+(1-y_i)ln(1-p(x_i))%5D+%5Cfrac%7B1%7D%7B2%5Csigma%5E2%7Dw%5ETw+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w_1,w_2">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-896a01ead6aee864250941a64e7931e4_r.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-91986c70dab4d152339ea085321c6f3f_r.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7Cw_1%7C+%7Cw_2%7C=F+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=L_1">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7Cw_1%7C+%7Cw_2%7C+">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-efc752bd6d1ce09dbf2e18b9766570eb_r.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cfrac%7B1%7D%7BN%7D++%5Csum_%7Bi+=+1%7D%5EN%7B(y_i+-w%5ET+x_i)%5E2+%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=C%7C%7Cw%7C%7C_%7B1%7D+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%7Cw_1%7C+%7Cw_2%7C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cfrac%7B1%7D%7BN%7D++%5Csum%7Bi+=+1%7D%5EN%7B(y_i+-w%5ET+x_i)%5E2+%7D++C%7C%7Cw%7C%7C_%7B1%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w=(0,x)">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=h(w)+=+f(w)+++C%7Cw%7C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=f(w)+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=C%7Cw%7C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=h_%7Bl%7D%5E%7B%27%7D(0)++h_%7Br%7D%5E%7B%27%7D(0)+=+(f%5E%7B%27%7D(0)+++C)(f%5E%7B%27%7D(0)+-+C)+%3C+0+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+C+%3E%7Cf%5E%7B%27%7D(0)%7C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=h+=+f+%7C%7Cw%7C%7C+">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-9c5aea83687172eb7d4756397bc2669e_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-649613856d724587cfe627ef1870a826_r.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=d_%7B(r,c),k,t%7D+=+W%5ET_%7Bc,t%7DX_%7B(r,c),k%7D+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+k=1,2%E2%80%A6M/m">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=d_%7B(r,c),k,t%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=(r,c)">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=W_%7Bc,t%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=d_%7Br,k,t%7D=W%5ET_t+X_%7Br,k%7D=%5Csum_%7Bc=1%7D%5En+d_%7B(r,c),k,t%7D=%5Csum_%7Bc=1%7D%5En+W_%7Bc,t%7D%5ETX_%7B(r,c),k%7D++%5C%5C">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-6b5f725a2893d4fa28a2ddb17db4c756_r.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=G_%7B(r,c),t%7D=%5Csum_%7Bk=1%7D%5E%7BM/m%7D%5B%5Csigma(y_%7Br,k%7Dd_%7Br,k,t%7D)-1%5Dy_%7Br,k%7DX_%7B(r,c),k%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+G_%7B(r,c),t%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=G_%7Bc,t%7D=%5Csum_%7Br=1%7D%5Em+G_%7B(r,c),t%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=G_%7Bc,t%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=G_t+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=G_t=%3CG_%7B1,t%7D,...,G_%7Bc,t%7D...G_%7Bn,t%7D%3E+%5C%5C">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-a7cc0b79e62018e1a62dfcab5435e8f4_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-d93c4826068dbca6030cb7ca895102a0_r.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi+(x)_u">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cpi(x)_u">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cpi(x)_y">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=P(Y=1%7Cx)+=+%5Cpi(x)_1+=%5Cdfrac%7Be%5E%7Bw+%5Ccdot+x%7D%7D%7B1+e%5E%7Bw+%5Ccdot+x%7D%7D+%5C%5C+++P(Y=0%7Cx)+=+%5Cpi(x)_0+=+1-%5Cpi(x)_1+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cpi(x)_v=%5Cdfrac%7Be%5E%7Bw_v+%5Ccdot+x%7D%7D%7B%5Csum_%7Bu=1%7D%5Ek+e%5E%7Bw_u+%5Ccdot+x%7D%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi(x_i)y_i">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=L(w)=%5Cprod_%7Bi=1%7D%5En+%5Cpi(x_i)%7By_i%7D+%5C%5C+lnL(w)=%5Csum_%7Bi=1%7D%5En+ln(%5Cpi(x_i)%7By_i%7D)++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+w_%7Bu,j%7D%7DlnL(w)=...=%5Csum_%7Bi=1,%5C;y_i=u%7D%5Enx_%7Bij%7D-%5Csum_%7Bi=1%7D%5Enx_%7Bij%7D%5Cpi(x_i)_u++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csum_%7Bi=1%7D%5Enx_%7Bij%7D%5Cpi(x_i)_u=%5Csum_%7Bi=1,%5C;y_i=u%7D%5Enx_%7Bij%7D,+(for%5C;all%5C;+u,j)++%5C%5C+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=A(u,y_i)+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csum_%7Bi=1%7D%5Enx_%7Bij%7D%5Cpi(x_i)_u=%5Csum_%7Bi=1%7D%5En+A(u,y_i)x_%7Bij%7D,+(for%5C;all%5C;+u,j)++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cpi+()+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi+()">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Cpi(x)_v%5Cgeq0+%5Cquad+always++%5C%5C+%5Csum_%7Bv=1%7D%5Ek%5Cpi(x)_v+=+1+%5Cquad+always+%5C%5C+%5Csum_%7Bi=1%7D%5Enx_%7Bij%7D%5Cpi(x_i)_u=%5Csum_%7Bi=1%7D%5En+A(u,y_i)x_%7Bij%7D,+%5Cquad(for%5C;all%5C;+u,j)+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi+()">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=-%5Csum_%7Bv=1%7D%5Ek%5Csum_%7Bi=1%7D%5En%5Cpi(x_i)vlog%5B%5Cpi(x_i)_v%5D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csum+%5Cpi()">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=L=%5Csum_%7Bj=1%7D%5Em%5Csum_%7Bv=1%7D%5Ekw_%7Bv,j%7D(%5Csum_%7Bi=1%7D%5En%5Cpi(x_i)_vx_%7Bij%7D-A(v,y_i)x_%7Bij%7D)+%5C%5C++%5Csum_%7Bv=1%7D%5Ek%5Csum_%7Bi=1%7D%5En%5Cbeta_i(%5Cpi(x_i)_v-1)++%5C%5C+-%5Csum_%7Bv=1%7D%5Ek%5Csum_%7Bi=1%7D%5En+%5Cpi(x_i)_vlog%5B%5Cpi(x_i)_v%5D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial+%5Cpi(x_i)_u%7DL=w_u+%5Ccdot+x_i+%5Cbeta_i-log%5B%5Cpi(x_i)_u%5D-1+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w_u+%5Ccdot+x_i+%5Cbeta_i-log%5B%5Cpi(x_i)_u%5D-1=0+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi(x_i)_u=e%5E%7Bw_u+%5Ccdot+x_i+%5Cbeta_i-1%7D++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csum_%7Bv=1%7D%5Ek+%5Cpi(x)_v+=+1++%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Csum_%7Bv=1%7D%5Eke%5E%7Bw_v+%5Ccdot+x_i+%5Cbeta_i-1%7D=1+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=e%5E%5Cbeta=%5Cfrac%7B1%7D%7B%5Csum_%7Bv=1%7D%5Eke%5E%7Bw_v+%5Ccdot+x_i-1%7D%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=e%5E%5Cbeta">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi+()">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cpi(x)_u=%5Cfrac%7Be%5E%7Bw_u%5Ccdot+x%7D%7D%7B%5Csum_%7Bv=1%7D%5Ek+e%5E%7Bw_v+%5Ccdot+x%7D%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=P(X%7CY=c_k)">
+<meta property="article:published_time" content="2021-11-09T02:02:18.000Z">
+<meta property="article:modified_time" content="2021-11-09T02:04:08.420Z">
+<meta property="article:author" content="YANG JIYI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=F(x)+=+P(X+%5Cleq+x)=%5Cfrac%7B1%7D%7B1+e%5E%7B-(x-%5Cmu)/%5Cgamma%7D%7D+%5C%5C+f(x)+=+F%5E%7B%27%7D(X+%5Cleq+x)=%5Cfrac%7Be%5E%7B-(x-%5Cmu)/%5Cgamma%7D%7D%7B%5Cgamma(1+e%5E%7B-(x-%5Cmu)/%5Cgamma%7D)%5E%7B2%7D%7D+%5C%5C">
+
+<link rel="canonical" href="https://foreveryoungjay.github.io/2021/11/09/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>逻辑回归 | YANG JIYI</title>
+  
 
 
 
-<p><strong>从数据库安全的角度：</strong><br>PreparedStatement可防止SQL注入。SQL注入情况如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//输入要删除的账户：&#x27;abc&#x27; or 1=1</span><br><span class="line">String username=&quot;&#x27;abc&#x27; or 1=1&quot;</span><br><span class="line"> </span><br><span class="line">//等待用户输入的SQL语句</span><br><span class="line">String sql=select * from user where username =&#x27;&quot;+username+&quot;&#x27;;</span><br></pre></td></tr></table></figure>
 
 
 
-<p>可以发现输入密码时，已经属于非法输入<br>使用Statement 的话最后的sql语句则是如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select * from user where name = &#x27;abc&#x27; or 1=1;</span><br></pre></td></tr></table></figure>
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="YANG JIYI" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">YANG JIYI</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
 
 
 
-<p>数据库容易被人恶意全部删除。</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Laplacian滤波器并用于图像锐化</title>
-    <url>/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</url>
-    <content><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p>
-<p>拉普拉斯滤波器卷积核表示</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p>
-<p><strong>利用Laplacian滤波器实现图像的锐化</strong></p>
-<p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p>
-<p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p>
-<p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p>
-<p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>What&#39;s this website</title>
-    <url>/2021/04/17/What-s-this-website/</url>
-    <content><![CDATA[<p>此网站仅为学习过程中的笔记，供大家分享。</p>
-<p><strong>一緒に頑張りましょう！</strong></p>
-<p><strong>What I’m doing right now, I’m chasing perfection.</strong></p>
-<p>如有疑问请发邮件到 <a href="mailto:&#49;&#51;&#48;&#x31;&#x34;&#x32;&#48;&#52;&#x32;&#55;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;">&#49;&#51;&#48;&#x31;&#x34;&#x32;&#48;&#52;&#x32;&#55;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;</a></p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1872327711,3275977009&fm=26&gp=0.jpg" alt="img"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>图像校正(Image Rectification)</title>
-    <url>/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/LoseInVain/article/details/102775734">https://blog.csdn.net/LoseInVain/article/details/102775734</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>active learning</title>
-    <url>/2021/09/19/active-learning/</url>
-    <content><![CDATA[<p>主动学习（Active Learning）的大致思路就是：通过机器学习的方法获取到那些比较<strong>“难”</strong>分类的样本数据，让人工再次确认和审核，然后将人工标注得到的数据再次使用有监督学习模型或者半监督学习模型进行训练，逐步提升模型的效果，将人工经验融入机器学习的模型中。</p>
-<p>那么主动学习（Active Learning）的整体思路究竟是怎样的呢？在机器学习的建模过程中，通常包括样本选择，模型训练，模型预测，模型更新这几个步骤。在主动学习这个领域则需要把标注候选集提取和人工标注这两个步骤加入整体流程，也就是：</p>
-<ol>
-<li>机器学习模型：包括机器学习模型的训练和预测两部分；</li>
-<li>待标注的数据候选集提取：依赖主动学习中的查询函数（Query Function）；</li>
-<li>人工标注：专家经验或者业务经验的提炼；</li>
-<li>获得候选集的标注数据：获得更有价值的样本数据；</li>
-<li>机器学习模型的更新：通过增量学习或者重新学习的方式更新模型，从而将人工标注的数据融入机器学习模型中，提升模型效果</li>
-</ol>
-<p><img src="https://img2018.cnblogs.com/blog/532548/201905/532548-20190527214307519-1416709660.png" alt="img"></p>
-<p>其中 L 是用于训练已标注的样本；</p>
-<p>C 为一组或者一个算法模型，用户接收上一轮的标记样本集，通过负反馈调整模型参数，并输出对应的预测结果向量集；</p>
-<p>Q 是查询函数，用于从当前剩余的未标注样本池（未标记样本会逐渐减少）U 中查询信息量最大（最不确定）的top样本；</p>
-<p>S是督导者，可以为 U 中样本标注正确的标签；</p>
-<p>active learning模型**通过少量初始标记样本 L 开始学习，通过一定的<font color='red'>查询函数 Q 选择出一个或一批最有用的样本</font>**，并向督导者询问标签，然后利用获得的新知识来训练分类器和进行下一轮查询。主动学习是一个循环的过程，直至达到某一停止准则为止。</p>
-<p>需要注意的是，active learning是一个算法框架，上图中的单个模块具备可替换性（alternative）</p>
-<p><a href="https://zhuanlan.zhihu.com/p/239756522">https://zhuanlan.zhihu.com/p/239756522</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>快速补全代码</title>
-    <url>/2021/04/22/%E5%BF%AB%E9%80%9F%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<p><strong>将鼠标放在接口的名称处按 Alt+Enter 键</strong></p>
-<p>实现接口：<strong>鼠标左键单击：Implement interface ，进入创建实现类的名字以及指明其所在的包的界面。选择好之后，点击ok即可完成</strong></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>摄像机原理</title>
-    <url>/2021/04/22/%E6%91%84%E5%83%8F%E6%9C%BA%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<p>The first important content is the <strong>image forming process.</strong> The image is an array. There is only one array for black and white images, and there are three arrays for color images. Then the picture is recorded by the camera because of the black box camera and the principle of small hole forming. There is a perspective effect through the camera, and the parallel lines will converge at a vanishing point in the distance in the picture. <strong>Homogeneous coordinates</strong> represent a vector that is originally n-dimensional with an n+1-dimensional vector, which refers to a coordinate system used in projection geometry, just like <strong>Cartesian coordinates used in Euclidean geometry.</strong> 2D and 3D transformations include homogeneous coordinates and transformation.</p>
-<p><strong>The intrinsic matrix</strong>: The focal length is from the pointer hole to the film, where the unit of focal length in pixels. <strong>The extrinsic matrix</strong> is used to describe the position of the camera in the “world coordinate system” and the direction it points to. The field of view depends on the focal length, the larger the <strong>focal length</strong>, the smaller the field of view. The smaller the focal length, the larger the field of view. The above is the position of the object in the photo, and the next is the pixel size. The biggest function of the <strong>large aperture</strong> is to highlight the subject, blur the background, and create a sense of hierarchy. The small aperture has a large clear range and is suitable for shooting themes such as scenery, travel, and documentary. The scenery is shot with a small aperture. With the pan-focus operation, the entire huge spatial scale picture can be located in a clear range. Finally, the digital camera, using imaging sensors.</p>
-<p>The second part is <strong>image processing</strong>, Proposed the <strong>Aliasing problem</strong>, the harm caused by down-sampling danger, Characteristic errors will appear. The solution involves multiple sampling to eliminate frequencies higher than half of the new sampling, Including <strong>Gaussian filtering</strong>.</p>
-<p><strong>Tone mapping</strong> makes the Incoming light energy and the Image intensity value not linear.</p>
-<p><strong>Bilinear interpolation</strong> is a linear interpolation extension of an interpolation function with two variables. Its core idea is to perform a linear interpolation in two directions. </p>
-<p><strong>Chromatic aberration:</strong> Different colors of light have different wavelengths. Therefore, the focal plane of light passing through the lens and light of different wavelengths will be slightly different. Besides, the angles of the chromatic images after passing through the lens will be slightly staggered when they reach the focal plane. That is, the seven basic colors of light reach different focal points. </p>
-<p><strong>Histogram Equalization</strong>: It is often used to enhance the overall contrast of the picture, especially for those cases where useful data is represented by similar data. </p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Lucas-Kanade 追踪算法</title>
-    <url>/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/u012554092/article/details/78128795">https://blog.csdn.net/u012554092/article/details/78128795</a></p>
-<p><a href="https://blog.csdn.net/u014568921/article/details/46638557">https://blog.csdn.net/u014568921/article/details/46638557</a></p>
-<p>算法实现：</p>
-<p><a href="https://blog.csdn.net/zhzhji440/article/details/43866695">https://blog.csdn.net/zhzhji440/article/details/43866695</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>随机抽样一致算法（RANdom SAmple Consensus,RANSAC）</title>
-    <url>/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/</url>
-    <content><![CDATA[<p>一、RANSAC介绍<br>   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该算法核心思想就是随机性和假设性，随机性是根据正确数据出现概率去随机选取抽样数据，根据大数定律，随机性模拟可以近似得到正确结果。假设性是假设选取出的抽样数据都是正确数据，然后用这些正确数据通过问题满足的模型，去计算其他点，然后对这次结果进行一个评分。<br>二、算法基本思想<br>（1）要得到一个直线模型，需要两个点唯一确定一个直线方程。所以第一步随机选择两个点。<br>（2）通过这两个点，可以计算出这两个点所表示的模型方程y=ax+b。<br>（3）将所有的数据点套到这个模型中计算误差。<br>（4）找到所有满足误差阈值的点。<br>（5）然后我们再重复（1）~（4）这个过程，<strong>直到达到一定迭代次数后，选出那个被支持的最多的模型，作为问题的解</strong>。如下图所示</p>
-<p><img src="https://img-blog.csdn.net/20161201151915050" alt="img"></p>
-<p>可以发现，虽然这个数据集中外点和内点的比例几乎相等，但是RANSAC算法还是能找到最合适的解。这个问题如果使用最小二乘法进行优化，由于噪声数据的干扰，我们得到的结果肯定是一个错误的结果，如下图所示。<strong>这是由于最小二乘法是一个将外点参与讨论的代价优化问题，而RANSAC是一个使用内点进行优化的问题。</strong>经实验验证，对于包含80%误差的数据集，RANSAC的效果远优于直接的最小二乘法。</p>
-<p><img src="https://img-blog.csdn.net/20161201151925746" alt="img"></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>对极几何</title>
-    <url>/2021/05/17/%E5%AF%B9%E6%9E%81%E5%87%A0%E4%BD%95/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/clarenceliang/p/6704970.html">https://www.cnblogs.com/clarenceliang/p/6704970.html</a></p>
-<p><a href="https://blog.csdn.net/tina_ttl/article/details/52749542">https://blog.csdn.net/tina_ttl/article/details/52749542</a></p>
-<p><a href="http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml">http://www.360doc.com/content/14/0205/14/10724725_349963695.shtml</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/79845576">https://zhuanlan.zhihu.com/p/79845576</a></p>
-<p><a href="https://blog.csdn.net/ssw_1990/article/details/53355572">https://blog.csdn.net/ssw_1990/article/details/53355572</a></p>
-]]></content>
-      <categories>
-        <category>CV</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>cluster聚合层次聚类算法</title>
-    <url>/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p><img src="https://pic4.zhimg.com/v2-05343ed3ff48cec83244ab64760acdeb_r.jpg" alt="img"></p>
-<p>层次聚类通过对数据集在不同层次进行划分，从而形成树形的聚类结构。数据集的划分可采用“自底向上”的聚合（agglomerative）策略，也可采用“自顶向下”的分拆（divisive）策略。“自底而上”的算法开始时把每一个原始数据看作一个单一的聚类簇，然后不断聚合小的聚类簇成为大的聚类。“自顶向下”的算法开始把所有数据看作一个聚类，通过不断分割大的聚类直到每一个单一的数据都被划分。</p>
-<p>根据聚类簇之间距离的计算方法的不同，层次聚类算法可以大致分为：单链接（Single-link）算法，全链接算法（complete-link）或均链接算法（average-link）。单链接算法用两个聚类簇中最近的样本距离作为两个簇之间的距离；而全链接使用计算两个聚类簇中最远的样本距离；均链接算法中两个聚类之间的距离由两个簇中所有的样本共同决定。</p>
-<p><img src="https://image.jiqizhixin.com/uploads/editor/f097aafc-3580-47c6-bb5e-4e4bed04aaa5/1523979971355.jpg" alt="img"></p>
-<p>“自底向上”的聚合层次聚类算法</p>
-<p>（1）计算任意两个数据之间的距离得到一个相似度矩阵（proximity matrix），并把每一个单一的数据看作是一个聚类；</p>
-<p>（2）查找相似度矩阵中距离最小的两个聚类，把他们聚合为一个新的聚类，然后根据这个新的聚类重新计算相似度矩阵；</p>
-<p>（3）重复（2）直到所有的数据都被归入到一个聚类中。</p>
-<p><img src="https://image.jiqizhixin.com/uploads/editor/ebee159c-0067-4ecc-af7a-2559c9e5f781/1523979971408.jpg" alt="img"></p>
-<p>“自顶向下”的分拆（divisive）策略则与之相反。</p>
-<p>可以使用单链接或者全链接的的方式来聚类簇之间的距离，会使得聚类的最终结果有所不同。</p>
-<p>针对层次聚类不适于解决大量数据的问题，Zhang 等人提出了一种基于聚类特征树（Clustering Feature Tree）的层次聚类算法：BIRCH算法（Balanced Iterative Reducing and Clustering Using Hierarchies）。BIRCH算法实现了只需要一次对数据集的遍历就可以完成聚类。其聚类的主要过程就是将所有数据依次插入构建聚类特征树的过程，而树上的每一个节点所包含的数据构成了一个对应的聚类簇。同时对于包含数据极少的节点我们可以认为它是异常点从而进行去除。</p>
-<p>层次聚类的另外一个变种算法是名为变色龙算法（Chameleon）。它是由George Karypis 教授提出的一种基于动态建模（Dynamic modeling）思想的层次聚类算法。该算法通过计算两个聚类簇之间的相似度和互连性从而克服CURE和ROCK等算法的缺点。变色龙算法首先将所有的数据根据他们之间的距离划分成众多的小的簇，通过计算相近簇之间的相似度和互连性不断合并形成大的聚类簇。</p>
-<p>k-means</p>
-<p>注意不要混淆K-近邻算法和K均值聚类。 K-近邻算法是一种分类算法，也是监督学习的一个子集。 K-means是一种聚类算法，也是非监督学习的一个子集。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/104355127">https://zhuanlan.zhihu.com/p/104355127</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>逻辑回归</title>
-    <url>/2021/11/09/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
-    <content><![CDATA[<h2 id="1-模型介绍"><a href="#1-模型介绍" class="headerlink" title="1. 模型介绍"></a>1. 模型介绍</h2><p>Logistic Regression 虽然被称为回归，但其实际上是分类模型，并常用于二分类。Logistic Regression 因其简单、可并行化、可解释强深受工业界喜爱。</p>
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+    
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+    
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/11/09/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
+      <meta itemprop="name" content="YANG JIYI">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YANG JIYI">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          逻辑回归
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-09 10:02:18 / Modified: 10:04:08" itemprop="dateCreated datePublished" datetime="2021-11-09T10:02:18+08:00">2021-11-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ML/" itemprop="url" rel="index"><span itemprop="name">ML</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-模型介绍"><a href="#1-模型介绍" class="headerlink" title="1. 模型介绍"></a>1. 模型介绍</h2><p>Logistic Regression 虽然被称为回归，但其实际上是分类模型，并常用于二分类。Logistic Regression 因其简单、可并行化、可解释强深受工业界喜爱。</p>
 <p>Logistic 回归的本质是：假设数据服从这个分布，然后使用极大似然估计做参数的估计。</p>
 <h3 id="1-1-Logistic-分布"><a href="#1-1-Logistic-分布" class="headerlink" title="1.1 Logistic 分布"></a>1.1 Logistic 分布</h3><p>Logistic 分布是一种连续型的概率分布，其<strong>分布函数</strong>和<strong>密度函数</strong>分别为：</p>
 <p><img src="https://www.zhihu.com/equation?tex=F(x)+=+P(X+%5Cleq+x)=%5Cfrac%7B1%7D%7B1+e%5E%7B-(x-%5Cmu)/%5Cgamma%7D%7D+%5C%5C+f(x)+=+F%5E%7B%27%7D(X+%5Cleq+x)=%5Cfrac%7Be%5E%7B-(x-%5Cmu)/%5Cgamma%7D%7D%7B%5Cgamma(1+e%5E%7B-(x-%5Cmu)/%5Cgamma%7D)%5E%7B2%7D%7D+%5C%5C" alt="[公式]"></p>
@@ -418,9 +548,225 @@
 <li>逻辑回归是判别式模型 p(y|x)，朴素贝叶斯是生成式模型 p(x,y)：判别式模型估计的是条件概率分布，给定观测变量 x 和目标变量 y 的条件模型，由数据直接学习决策函数 y=f(x) 或者条件概率分布 P(y|x) 作为预测的模型。判别方法关心的是对于给定的输入 x，应该预测什么样的输出 y；而生成式模型估计的是联合概率分布，基本思想是首先建立样本的联合概率概率密度模型 P(x,y)，然后再得到后验概率 P(y|x)，再利用它进行分类，生成式更关心的是对于给定输入 x 和输出 y 的生成关系；</li>
 <li>朴素贝叶斯的前提是条件独立，每个特征权重独立，所以如果数据不符合这个情况，朴素贝叶斯的分类表现就没逻辑会好了。</li>
 </ul>
-]]></content>
-      <categories>
-        <category>ML</category>
-      </categories>
-  </entry>
-</search>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/" rel="prev" title="cluster聚合层次聚类算法">
+      <i class="fa fa-chevron-left"></i> cluster聚合层次聚类算法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">1. 模型介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Logistic-%E5%88%86%E5%B8%83"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Logistic 分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Logistic-%E5%9B%9E%E5%BD%92"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Logistic 回归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 代价函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E6%B1%82%E8%A7%A3"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 求解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 正则化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-%E5%B9%B6%E8%A1%8C%E5%8C%96"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 并行化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%8E%E5%85%B6%E4%BB%96%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-number">2.</span> <span class="nav-text">2. 与其他模型的对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 与线性回归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E4%B8%8E%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 与最大熵模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E4%B8%8E-SVM"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 与 SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E4%B8%8E%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 与朴素贝叶斯</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="YANG JIYI"
+      src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
+  <p class="site-author-name" itemprop="name">YANG JIYI</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ForeverYoungJay" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ForeverYoungJay" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangjiyi19981211@gmail.com" title="E-Mail → mailto:yangjiyi19981211@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+    
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YANG JIYI</span>
+</div>
+<br />
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("12/11/2020 15:54:40");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "RUNING "+dnum+" DAY ";
+        document.getElementById("times").innerHTML = hnum + " HOURS " + mnum + " MINS " + snum + " SECONDS";
+    }
+setInterval("createtime()",250);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+    </div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
