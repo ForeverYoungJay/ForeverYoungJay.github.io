@@ -171,16 +171,17 @@
   <entry>
     <title>k-means 如何确定k 和 初始聚类</title>
     <url>/2021/11/09/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9Ak%E5%9C%A8k-means/</url>
-    <content><![CDATA[<p><strong>K****值确定</strong></p>
+    <content><![CDATA[<p><a href="https://www.biaodianfu.com/hierarchical-clustering.html">https://www.biaodianfu.com/hierarchical-clustering.html</a></p>
+<p><strong>K值确定</strong></p>
 <p>**法1：(轮廓系数)**在实际应用中，由于Kmean一般作为数据预处理，或者用于辅助分聚类贴标签。所以k一般不会设置很大。可以通过枚举，令k从2到一个固定值如10，在每个k值上重复运行数次kmeans(避免局部最优解)，并计算当前k的平均轮廓系数，最后选取轮廓系数最大的值对应的k作为最终的集群数目。</p>
+<p>z常见的一种方法是elbow method，x轴为聚类的数量，y轴为WSS（within cluster sum of squares）也就是各个点到cluster中心的距离的平方的和。</p>
+<p><img src="https://pic1.zhimg.com/v2-916dd08810a3e3ca23ecab29378cbfdc_r.jpg?source=1940ef5c" alt="preview"></p>
 <p><strong>法2：(Calinski-Harabasz准则)</strong></p>
 <p>  <img src="https://images2015.cnblogs.com/blog/804917/201609/804917-20160904180009662-1327263953.png" alt="img"></p>
 <p>其中SSB是类间方差，<img src="https://images2015.cnblogs.com/blog/804917/201609/804917-20160904180019100-58882840.png" alt="img"> ，m为所有点的中心点,mi为某类的中心点；</p>
 <p>SSW是类内方差，<img src="https://images2015.cnblogs.com/blog/804917/201609/804917-20160904180044867-864335001.png" alt="img">；</p>
 <p>(N-k)/(k-1)是复杂度；</p>
 <p><img src="https://images2015.cnblogs.com/blog/804917/201609/804917-20160904180103509-48249157.png" alt="img">比率越大，数据分离度越大.</p>
-<p>z常见的一种方法是elbow method，x轴为聚类的数量，y轴为WSS（within cluster sum of squares）也就是各个点到cluster中心的距离的平方的和。</p>
-<p><img src="https://pic1.zhimg.com/v2-916dd08810a3e3ca23ecab29378cbfdc_r.jpg?source=1940ef5c" alt="preview"></p>
 <p><strong>初始点选择方法：</strong></p>
 <p>思想，初始的聚类中心之间相互距离尽可能远.</p>
 <p><strong>法1(kmeans++):</strong></p>
