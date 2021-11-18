@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://foreveryoungjay.github.io/2021/11/18/pandas/</loc>
+    
+    <lastmod>2021-11-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://foreveryoungjay.github.io/2021/11/16/%E9%AB%98%E7%BB%B4%E7%BB%98%E5%9B%BE/</loc>
     
     <lastmod>2021-11-16</lastmod>
@@ -158,7 +165,7 @@
 
   <url>
     <loc>https://foreveryoungjay.github.io/</loc>
-    <lastmod>2021-11-16</lastmod>
+    <lastmod>2021-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -166,7 +173,7 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/tags/matplotlib/</loc>
-    <lastmod>2021-11-16</lastmod>
+    <lastmod>2021-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -175,28 +182,35 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/CV/</loc>
-    <lastmod>2021-11-16</lastmod>
+    <lastmod>2021-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/Java/</loc>
-    <lastmod>2021-11-16</lastmod>
+    <lastmod>2021-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-11-16</lastmod>
+    <lastmod>2021-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/ML/</loc>
-    <lastmod>2021-11-16</lastmod>
+    <lastmod>2021-11-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://foreveryoungjay.github.io/categories/python/</loc>
+    <lastmod>2021-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

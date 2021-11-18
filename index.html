@@ -189,6 +189,121 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/11/18/pandas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
+      <meta itemprop="name" content="YANG JIYI">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YANG JIYI">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/18/pandas/" class="post-title-link" itemprop="url">pandas</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-18 22:22:17 / Modified: 22:26:52" itemprop="dateCreated datePublished" datetime="2021-11-18T22:22:17+08:00">2021-11-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>二、sort_values()函数的具体参数</p>
+<p>用法：<br>DataFrame.sort_values(by=‘##’,axis=0,ascending=True, inplace=False, na_position=‘last’)</p>
+<p>参数说明</p>
+<p>参数    说明<br>by    指定列名(axis=0或’index’)或索引值(axis=1或’columns’)<br>axis    若axis=0或’index’，则按照指定列中数据大小排序；若axis=1或’columns’，则按照指定索引中数据大小排序，默认axis=0<br>ascending    是否按指定列的数组升序排列，默认为True，即升序排列<br>inplace    是否用排序后的数据集替换原来的数据，默认为False，即不替换<br>na_position    {‘first’,‘last’}，设定缺失值的显示位置</p>
+<p>DataFrame.<strong>drop</strong>(<em>labels=None</em>, <em>axis=0</em>, <em>index=None</em>, <em>columns=None</em>, <em>level=None</em>, <em>inplace=False</em>, <em>errors=’raise’</em>)[<a target="_blank" rel="noopener" href="https://github.com/pandas-dev/pandas/blob/v1.3.4/pandas/core/frame.py#L4774-L4914">source]</a></p>
+<p>Drop specified labels from rows or columns.</p>
+<p>默认参数 axis=0，表示对行进行操作，如需对列进行操作需要更改默认参数为 axis=1，</p>
+<p>默认参数 inplace=False，表示该删除操作不改变原数据，而是返回一个执行删除操作后的新 dataframe，如需直接在原数据上进行删除操作，需要更改默认参数为 inplace=True</p>
+<table>
+<thead>
+<tr>
+<th>参数说明</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>labels</td>
+<td>就是要删除的行列的名字，用列表给定</td>
+</tr>
+<tr>
+<td>axis</td>
+<td>默认为 0，指删除行，因此删除 columns 时要指定 axis=1；</td>
+</tr>
+<tr>
+<td>index</td>
+<td>直接指定要删除的行</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>直接指定要删除的列</td>
+</tr>
+<tr>
+<td>inplace=False，</td>
+<td>默认该删除操作不改变原数据，而是返回一个执行删除操作后的 新 dataframe；</td>
+</tr>
+<tr>
+<td>inplace=True，</td>
+<td>则会直接在原数据上进行删除操作，删除后无法返回。</td>
+</tr>
+</tbody></table>
+<p><strong>reset_index()方法来重置它们的索引</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/18/pandas/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/11/16/%E9%AB%98%E7%BB%B4%E7%BB%98%E5%9B%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -896,85 +1011,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
-      <meta itemprop="name" content="YANG JIYI">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YANG JIYI">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">Lucas-Kanade 追踪算法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-05-17 21:03:05 / Modified: 21:27:55" itemprop="dateCreated datePublished" datetime="2021-05-17T21:03:05+08:00">2021-05-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CV/" itemprop="url" rel="index"><span itemprop="name">CV</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012554092/article/details/78128795">https://blog.csdn.net/u012554092/article/details/78128795</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014568921/article/details/46638557">https://blog.csdn.net/u014568921/article/details/46638557</a></p>
-<p>算法实现：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhzhji440/article/details/43866695">https://blog.csdn.net/zhzhji440/article/details/43866695</a></p>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/17/Lucas-Kanade-%E8%BF%BD%E8%B8%AA%E7%AE%97%E6%B3%95/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1046,14 +1082,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
