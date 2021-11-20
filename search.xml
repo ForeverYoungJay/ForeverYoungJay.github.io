@@ -543,4 +543,45 @@
         <category>python</category>
       </categories>
   </entry>
+  <entry>
+    <title>机器学习调参方法：贝叶斯优化</title>
+    <url>/2021/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B0%83%E5%8F%82%E6%96%B9%E6%B3%95%EF%BC%9A%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p><strong>最优解问题</strong></p>
+<p>最简单的，获得最优解的方法，就是网格搜索Grid Search了。</p>
+<p>如果网格搜索开销稍微有点大，可以尝试随机搜索Random Search。</p>
+<p>如果是凸函数Convex Function，我们可以用Gradient Descent。大量的机器学习算法，都用了这个。如线性回归，逻辑回归等。</p>
+<p>如果，这个黑盒函数的开销非常大，又不是凸函数，我们则考虑贝叶斯优化。</p>
+<p>贝叶斯优化概念<br>贝叶斯优化我们把这个黑盒函数叫做目标函数Objective Function。因为目标函数的开销大，我们要给他找一个近似函数，这个函数叫代理函数Surrogate Function。代理函数会计算出一条平均值曲线和对应的标准差（Standard Deviation）。有个代理函数，我们就可以找到一下个探索点。这个过程，用一个获取函数Acquisition Function里实现。</p>
+<p>贝叶斯优化，是在一个特定的搜索空间search space展开的。</p>
+<p>整个过程如下：</p>
+<p>在搜索空间中，选几个初始点X<br>用目标函数计算初始点X对应的解y<br>更新代理函数<br>通过acquisition function获得下一个样本点。<br>Goto 2</p>
+<p><a href="https://github.com/juwikuang/machine_learning_step_by_step/blob/master/bayesian_optimization.ipynb">https://github.com/juwikuang/machine_learning_step_by_step/blob/master/bayesian_optimization.ipynb</a></p>
+<p><a href="https://www.cnblogs.com/yangruiGB2312/p/9374377.html">https://www.cnblogs.com/yangruiGB2312/p/9374377.html</a></p>
+<p><a href="https://www.cnblogs.com/marsggbo/p/9866764.html">https://www.cnblogs.com/marsggbo/p/9866764.html</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/72403538">https://zhuanlan.zhihu.com/p/72403538</a></p>
+<p><a href="https://blog.csdn.net/juwikuang/article/details/105182133">https://blog.csdn.net/juwikuang/article/details/105182133</a></p>
+<p><a href="https://www.cnblogs.com/pythonlearner/p/12903602.html">https://www.cnblogs.com/pythonlearner/p/12903602.html</a></p>
+<p>贝叶斯优化在机器学习和深度学习的使用:<a href="https://www.pythonf.cn/read/123874">https://www.pythonf.cn/read/123874</a></p>
+<p><a href="https://blog.csdn.net/Leon_winter/article/details/86604553">https://blog.csdn.net/Leon_winter/article/details/86604553</a></p>
+<p><a href="https://www.jiqizhixin.com/articles/2020-10-05-2">https://www.jiqizhixin.com/articles/2020-10-05-2</a></p>
+<p>超参数调优总结 <a href="https://zhuanlan.zhihu.com/p/294795418">https://zhuanlan.zhihu.com/p/294795418</a></p>
+<p>理解贝叶斯优化<a href="https://cloud.tencent.com/developer/article/1641595">https://cloud.tencent.com/developer/article/1641595</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/53826787">https://zhuanlan.zhihu.com/p/53826787</a></p>
+<p>例子：<a href="https://zhuanlan.zhihu.com/p/52778805">https://zhuanlan.zhihu.com/p/52778805</a></p>
+<p>贝叶斯优化调参之Hyperopt<a href="https://zhuanlan.zhihu.com/p/50447750">https://zhuanlan.zhihu.com/p/50447750</a></p>
+<p><strong>scikit-optimize</strong></p>
+<p><a href="https://scikit-optimize.github.io/stable/auto_examples/bayesian-optimization.html">https://scikit-optimize.github.io/stable/auto_examples/bayesian-optimization.html</a></p>
+<h1 id="scipy-optimize-minimize"><a href="#scipy-optimize-minimize" class="headerlink" title="scipy.optimize.minimize"></a>scipy.optimize.minimize</h1><p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html</a></p>
+]]></content>
+      <categories>
+        <category>ML</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>线性回归</title>
+    <url>/2021/11/20/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_48077303/article/details/108861439">https://blog.csdn.net/weixin_48077303/article/details/108861439</a></p>
+<h1 id="使用sklearn做各种回归"><a href="#使用sklearn做各种回归" class="headerlink" title="使用sklearn做各种回归"></a>使用sklearn做各种回归</h1><p><a href="https://blog.csdn.net/Yeoman92/article/details/75051848">https://blog.csdn.net/Yeoman92/article/details/75051848</a></p>
+]]></content>
+  </entry>
 </search>

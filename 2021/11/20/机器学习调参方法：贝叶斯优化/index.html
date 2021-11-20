@@ -20,22 +20,19 @@
     var CONFIG = {"hostname":"foreveryoungjay.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="一、RANSAC介绍   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该">
+  <meta name="description" content="最优解问题 最简单的，获得最优解的方法，就是网格搜索Grid Search了。 如果网格搜索开销稍微有点大，可以尝试随机搜索Random Search。 如果是凸函数Convex Function，我们可以用Gradient Descent。大量的机器学习算法，都用了这个。如线性回归，逻辑回归等。 如果，这个黑盒函数的开销非常大，又不是凸函数，我们则考虑贝叶斯优化。 贝叶斯优化概念贝叶斯优化我们把">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随机抽样一致算法（RANdom SAmple Consensus,RANSAC）">
-<meta property="og:url" content="https://foreveryoungjay.github.io/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/index.html">
+<meta property="og:title" content="机器学习调参方法：贝叶斯优化">
+<meta property="og:url" content="https://foreveryoungjay.github.io/2021/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B0%83%E5%8F%82%E6%96%B9%E6%B3%95%EF%BC%9A%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="YANG JIYI">
-<meta property="og:description" content="一、RANSAC介绍   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该">
+<meta property="og:description" content="最优解问题 最简单的，获得最优解的方法，就是网格搜索Grid Search了。 如果网格搜索开销稍微有点大，可以尝试随机搜索Random Search。 如果是凸函数Convex Function，我们可以用Gradient Descent。大量的机器学习算法，都用了这个。如线性回归，逻辑回归等。 如果，这个黑盒函数的开销非常大，又不是凸函数，我们则考虑贝叶斯优化。 贝叶斯优化概念贝叶斯优化我们把">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdn.net/20161201151915050">
-<meta property="og:image" content="https://img-blog.csdn.net/20161201151925746">
-<meta property="article:published_time" content="2021-05-19T02:34:16.000Z">
-<meta property="article:modified_time" content="2021-05-19T07:09:02.605Z">
+<meta property="article:published_time" content="2021-11-20T14:12:30.000Z">
+<meta property="article:modified_time" content="2021-11-20T14:25:41.548Z">
 <meta property="article:author" content="YANG JIYI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdn.net/20161201151915050">
 
-<link rel="canonical" href="https://foreveryoungjay.github.io/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/">
+<link rel="canonical" href="https://foreveryoungjay.github.io/2021/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B0%83%E5%8F%82%E6%96%B9%E6%B3%95%EF%BC%9A%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%BC%98%E5%8C%96/">
 
 
 <script id="page-configurations">
@@ -48,7 +45,7 @@
   };
 </script>
 
-  <title>随机抽样一致算法（RANdom SAmple Consensus,RANSAC） | YANG JIYI</title>
+  <title>机器学习调参方法：贝叶斯优化 | YANG JIYI</title>
   
 
 
@@ -197,7 +194,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/11/20/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%B0%83%E5%8F%82%E6%96%B9%E6%B3%95%EF%BC%9A%E8%B4%9D%E5%8F%B6%E6%96%AF%E4%BC%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
@@ -210,7 +207,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          随机抽样一致算法（RANdom SAmple Consensus,RANSAC）
+          机器学习调参方法：贝叶斯优化
         </h1>
 
         <div class="post-meta">
@@ -221,7 +218,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-05-19 10:34:16 / Modified: 15:09:02" itemprop="dateCreated datePublished" datetime="2021-05-19T10:34:16+08:00">2021-05-19</time>
+              <time title="Created: 2021-11-20 22:12:30 / Modified: 22:25:41" itemprop="dateCreated datePublished" datetime="2021-11-20T22:12:30+08:00">2021-11-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -229,7 +226,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CV/" itemprop="url" rel="index"><span itemprop="name">CV</span></a>
+                  <a href="/categories/ML/" itemprop="url" rel="index"><span itemprop="name">ML</span></a>
                 </span>
             </span>
 
@@ -244,10 +241,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>一、RANSAC介绍<br>   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该算法核心思想就是随机性和假设性，随机性是根据正确数据出现概率去随机选取抽样数据，根据大数定律，随机性模拟可以近似得到正确结果。假设性是假设选取出的抽样数据都是正确数据，然后用这些正确数据通过问题满足的模型，去计算其他点，然后对这次结果进行一个评分。<br>二、算法基本思想<br>（1）要得到一个直线模型，需要两个点唯一确定一个直线方程。所以第一步随机选择两个点。<br>（2）通过这两个点，可以计算出这两个点所表示的模型方程y=ax+b。<br>（3）将所有的数据点套到这个模型中计算误差。<br>（4）找到所有满足误差阈值的点。<br>（5）然后我们再重复（1）~（4）这个过程，<strong>直到达到一定迭代次数后，选出那个被支持的最多的模型，作为问题的解</strong>。如下图所示</p>
-<p><img src="https://img-blog.csdn.net/20161201151915050" alt="img"></p>
-<p>可以发现，虽然这个数据集中外点和内点的比例几乎相等，但是RANSAC算法还是能找到最合适的解。这个问题如果使用最小二乘法进行优化，由于噪声数据的干扰，我们得到的结果肯定是一个错误的结果，如下图所示。<strong>这是由于最小二乘法是一个将外点参与讨论的代价优化问题，而RANSAC是一个使用内点进行优化的问题。</strong>经实验验证，对于包含80%误差的数据集，RANSAC的效果远优于直接的最小二乘法。</p>
-<p><img src="https://img-blog.csdn.net/20161201151925746" alt="img"></p>
+        <p><strong>最优解问题</strong></p>
+<p>最简单的，获得最优解的方法，就是网格搜索Grid Search了。</p>
+<p>如果网格搜索开销稍微有点大，可以尝试随机搜索Random Search。</p>
+<p>如果是凸函数Convex Function，我们可以用Gradient Descent。大量的机器学习算法，都用了这个。如线性回归，逻辑回归等。</p>
+<p>如果，这个黑盒函数的开销非常大，又不是凸函数，我们则考虑贝叶斯优化。</p>
+<p>贝叶斯优化概念<br>贝叶斯优化我们把这个黑盒函数叫做目标函数Objective Function。因为目标函数的开销大，我们要给他找一个近似函数，这个函数叫代理函数Surrogate Function。代理函数会计算出一条平均值曲线和对应的标准差（Standard Deviation）。有个代理函数，我们就可以找到一下个探索点。这个过程，用一个获取函数Acquisition Function里实现。</p>
+<p>贝叶斯优化，是在一个特定的搜索空间search space展开的。</p>
+<p>整个过程如下：</p>
+<p>在搜索空间中，选几个初始点X<br>用目标函数计算初始点X对应的解y<br>更新代理函数<br>通过acquisition function获得下一个样本点。<br>Goto 2</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/juwikuang/machine_learning_step_by_step/blob/master/bayesian_optimization.ipynb">https://github.com/juwikuang/machine_learning_step_by_step/blob/master/bayesian_optimization.ipynb</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yangruiGB2312/p/9374377.html">https://www.cnblogs.com/yangruiGB2312/p/9374377.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/marsggbo/p/9866764.html">https://www.cnblogs.com/marsggbo/p/9866764.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/72403538">https://zhuanlan.zhihu.com/p/72403538</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/juwikuang/article/details/105182133">https://blog.csdn.net/juwikuang/article/details/105182133</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/pythonlearner/p/12903602.html">https://www.cnblogs.com/pythonlearner/p/12903602.html</a></p>
+<p>贝叶斯优化在机器学习和深度学习的使用:<a target="_blank" rel="noopener" href="https://www.pythonf.cn/read/123874">https://www.pythonf.cn/read/123874</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Leon_winter/article/details/86604553">https://blog.csdn.net/Leon_winter/article/details/86604553</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jiqizhixin.com/articles/2020-10-05-2">https://www.jiqizhixin.com/articles/2020-10-05-2</a></p>
+<p>超参数调优总结 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/294795418">https://zhuanlan.zhihu.com/p/294795418</a></p>
+<p>理解贝叶斯优化<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1641595">https://cloud.tencent.com/developer/article/1641595</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/53826787">https://zhuanlan.zhihu.com/p/53826787</a></p>
+<p>例子：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/52778805">https://zhuanlan.zhihu.com/p/52778805</a></p>
+<p>贝叶斯优化调参之Hyperopt<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/50447750">https://zhuanlan.zhihu.com/p/50447750</a></p>
+<p><strong>scikit-optimize</strong></p>
+<p><a target="_blank" rel="noopener" href="https://scikit-optimize.github.io/stable/auto_examples/bayesian-optimization.html">https://scikit-optimize.github.io/stable/auto_examples/bayesian-optimization.html</a></p>
+<h1 id="scipy-optimize-minimize"><a href="#scipy-optimize-minimize" class="headerlink" title="scipy.optimize.minimize"></a>scipy.optimize.minimize</h1><p><a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html</a></p>
 
     </div>
 
@@ -263,12 +282,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/17/%E5%AF%B9%E6%9E%81%E5%87%A0%E4%BD%95/" rel="prev" title="对极几何">
-      <i class="fa fa-chevron-left"></i> 对极几何
+    <a href="/2021/11/18/pandas/" rel="prev" title="pandas">
+      <i class="fa fa-chevron-left"></i> pandas
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/" rel="next" title="图像校正(Image Rectification)">
-      图像校正(Image Rectification) <i class="fa fa-chevron-right"></i>
+    <a href="/2021/11/20/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/" rel="next" title="线性回归">
+      线性回归 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -328,6 +347,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#scipy-optimize-minimize"><span class="nav-number">1.</span> <span class="nav-text">scipy.optimize.minimize</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
