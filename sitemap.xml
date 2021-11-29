@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://foreveryoungjay.github.io/2021/11/29/%E7%BA%BF%E7%A8%8B/</loc>
+    
+    <lastmod>2021-11-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://foreveryoungjay.github.io/2021/11/20/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</loc>
     
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-21</lastmod>
     
   </url>
   
@@ -179,7 +186,7 @@
 
   <url>
     <loc>https://foreveryoungjay.github.io/</loc>
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -187,7 +194,7 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/tags/matplotlib/</loc>
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -196,35 +203,35 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/CV/</loc>
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/Java/</loc>
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/ML/</loc>
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/python/</loc>
-    <lastmod>2021-11-20</lastmod>
+    <lastmod>2021-11-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

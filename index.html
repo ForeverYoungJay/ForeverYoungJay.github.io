@@ -189,6 +189,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/11/29/%E7%BA%BF%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
+      <meta itemprop="name" content="YANG JIYI">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YANG JIYI">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/29/%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">线程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-29 21:29:00 / Modified: 21:35:09" itemprop="dateCreated datePublished" datetime="2021-11-29T21:29:00+08:00">2021-11-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>看了一遍排在前面的答案，类似”进程是资源分配的最小单位，线程是CPU调度的最小单位“这样的回答感觉太抽象，都不太容易让人理解。</p>
+<p>做个简单的比喻：进程=火车，线程=车厢</p>
+<p>线程在进程下行进（单纯的车厢无法运行）<br>一个进程可以包含多个线程（一辆火车可以有多个车厢）<br>不同进程间数据很难共享（一辆火车上的乘客很难换到另外一辆火车，比如站点换乘）<br>同一进程下不同线程间数据很易共享（A车厢换到B车厢很容易）<br>进程要比线程消耗更多的计算机资源（采用多列火车相比多个车厢更耗资源）<br>进程间不会相互影响，一个线程挂掉将导致整个进程挂掉（一列火车不会影响到另外一列火车，但是如果一列火车上中间的一节车厢着火了，将影响到所有车厢）<br>进程可以拓展到多机，进程最多适合多核（不同火车可以开在多个轨道上，同一火车的车厢不能在行进的不同的轨道上）<br>进程使用的内存地址可以上锁，即一个线程使用某些共享内存时，其他线程必须等它结束，才能使用这一块内存。（比如火车上的洗手间）－”互斥锁”<br>进程使用的内存地址可以限定使用量（比如火车上的餐厅，最多只允许多少人进入，如果满了需要在门口等，等有人出来了才能进去）－“信号量”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">takeSleep</span>(<span class="params"><span class="built_in">id</span>, name</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(name+<span class="string">&#x27;-&#x27;</span>+<span class="built_in">id</span>+<span class="string">&#x27;:线程开始运行...&#x27;</span>)</span><br><span class="line">    time.sleep(random.randint(<span class="number">0</span>, <span class="number">3</span>))</span><br><span class="line">    <span class="built_in">print</span>(name+<span class="string">&#x27;-&#x27;</span>+<span class="built_in">id</span>+<span class="string">&#x27;:线程任务结束&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;主程序开始运行...&#x27;</span>)</span><br><span class="line">threads = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">5</span>):</span><br><span class="line">    t = threading.Thread(target=takeSleep, args=(<span class="built_in">str</span>(i), <span class="string">&#x27;zhangphil&#x27;</span>))</span><br><span class="line">    threads.append(t)</span><br><span class="line">    t.start()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;主程序运行中...&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment">#等待所有线程任务结束。</span></span><br><span class="line"><span class="keyword">for</span> t <span class="keyword">in</span> threads:</span><br><span class="line">    t.join()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;所有线程任务完成&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">主程序开始运行...</span><br><span class="line">zhangphil-<span class="number">0</span>:线程开始运行...</span><br><span class="line">zhangphil-<span class="number">1</span>:线程开始运行...</span><br><span class="line">zhangphil-<span class="number">0</span>:线程任务结束zhangphil-<span class="number">2</span>:线程开始运行...</span><br><span class="line">zhangphil-<span class="number">3</span>:线程开始运行...</span><br><span class="line"> </span><br><span class="line">zhangphil-<span class="number">1</span>:线程任务结束</span><br><span class="line">zhangphil-<span class="number">4</span>:线程开始运行...主程序运行中...</span><br><span class="line"> </span><br><span class="line">zhangphil-<span class="number">4</span>:线程任务结束</span><br><span class="line">zhangphil-<span class="number">2</span>:线程任务结束</span><br><span class="line">zhangphil-<span class="number">3</span>:线程任务结束</span><br><span class="line">所有线程任务完成</span><br><span class="line"> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span>  Process</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span>(<span class="params">name</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;测试%s多进程&#x27;</span> %name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    process_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):  <span class="comment">#开启5个子进程执行fun1函数</span></span><br><span class="line">        p = Process(target=fun1,args=(<span class="string">&#x27;Python&#x27;</span>,)) <span class="comment">#实例化进程对象</span></span><br><span class="line">        p.start()</span><br><span class="line">        process_list.append(p)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> process_list:</span><br><span class="line">        p.join()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;结束测试&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">测试Python多进程</span><br><span class="line">测试Python多进程</span><br><span class="line">测试Python多进程</span><br><span class="line">测试Python多进程</span><br><span class="line">测试Python多进程</span><br><span class="line">结束测试</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">child_thread1</span>():</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;child_thread1_running...&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parent_thread</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;parent_thread_running...&#x27;</span>)</span><br><span class="line">    thread1 = threading.Thread(target=child_thread1)</span><br><span class="line">    thread1.start()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;parent_thread_exit...&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    parent_thread()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">parent_thread_running...</span><br><span class="line">parent_thread_exit...</span><br><span class="line">child_thread1_running...</span><br><span class="line">child_thread1_running...</span><br><span class="line">child_thread1_running...</span><br><span class="line">child_thread1_running...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>获取返回值</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/29/%E7%BA%BF%E7%A8%8B/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/11/20/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -212,10 +293,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-11-20 22:22:54 / Modified: 22:25:43" itemprop="dateCreated datePublished" datetime="2021-11-20T22:22:54+08:00">2021-11-20</time>
+              <time title="Created: 2021-11-20 22:22:54" itemprop="dateCreated datePublished" datetime="2021-11-20T22:22:54+08:00">2021-11-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-11-21 11:05:52" itemprop="dateModified" datetime="2021-11-21T11:05:52+08:00">2021-11-21</time>
+              </span>
 
           
 
@@ -230,6 +317,10 @@
       
           <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48077303/article/details/108861439">https://blog.csdn.net/weixin_48077303/article/details/108861439</a></p>
 <h1 id="使用sklearn做各种回归"><a href="#使用sklearn做各种回归" class="headerlink" title="使用sklearn做各种回归"></a>使用sklearn做各种回归</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Yeoman92/article/details/75051848">https://blog.csdn.net/Yeoman92/article/details/75051848</a></p>
+<h1 id="决策树—回归"><a href="#决策树—回归" class="headerlink" title="决策树—回归"></a>决策树—回归</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/42505644">https://zhuanlan.zhihu.com/p/42505644</a></p>
+<p><img src="https://pic1.zhimg.com/v2-00c3f8417a16d242746817766af409d0_r.jpg" alt="img"></p>
+<p><img src="https://pic4.zhimg.com/v2-08dfacefaec889ef28566b85587f9cc7_r.jpg" alt="img"></p>
+<h1 id="多项式回归"><a href="#多项式回归" class="headerlink" title="多项式回归"></a>多项式回归</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/77555547">https://zhuanlan.zhihu.com/p/77555547</a></p>
 
           <!--noindex-->
             <div class="post-button">
@@ -928,85 +1019,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
-      <meta itemprop="name" content="YANG JIYI">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YANG JIYI">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/" class="post-title-link" itemprop="url">随机抽样一致算法（RANdom SAmple Consensus,RANSAC）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-05-19 10:34:16 / Modified: 15:09:02" itemprop="dateCreated datePublished" datetime="2021-05-19T10:34:16+08:00">2021-05-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CV/" itemprop="url" rel="index"><span itemprop="name">CV</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一、RANSAC介绍<br>   随机抽样一致算法（RANdom SAmple Consensus,RANSAC）,采用迭代的方式从一组包含离群的被观测数据中估算出数学模型的参数。RANSAC算法假设数据中包含正确数据和异常数据（或称为噪声）。正确数据记为内点（inliers），异常数据记为外点（outliers）。同时RANSAC也假设，给定一组正确的数据，存在可以计算出符合这些数据的模型参数的方法。该算法核心思想就是随机性和假设性，随机性是根据正确数据出现概率去随机选取抽样数据，根据大数定律，随机性模拟可以近似得到正确结果。假设性是假设选取出的抽样数据都是正确数据，然后用这些正确数据通过问题满足的模型，去计算其他点，然后对这次结果进行一个评分。<br>二、算法基本思想<br>（1）要得到一个直线模型，需要两个点唯一确定一个直线方程。所以第一步随机选择两个点。<br>（2）通过这两个点，可以计算出这两个点所表示的模型方程y=ax+b。<br>（3）将所有的数据点套到这个模型中计算误差。<br>（4）找到所有满足误差阈值的点。<br>（5）然后我们再重复（1）~（4）这个过程，<strong>直到达到一定迭代次数后，选出那个被支持的最多的模型，作为问题的解</strong>。如下图所示</p>
-<p><img src="https://img-blog.csdn.net/20161201151915050" alt="img"></p>
-<p>可以发现，虽然这个数据集中外点和内点的比例几乎相等，但是RANSAC算法还是能找到最合适的解。这个问题如果使用最小二乘法进行优化，由于噪声数据的干扰，我们得到的结果肯定是一个错误的结果，如下图所示。<strong>这是由于最小二乘法是一个将外点参与讨论的代价优化问题，而RANSAC是一个使用内点进行优化的问题。</strong>经实验验证，对于包含80%误差的数据集，RANSAC的效果远优于直接的最小二乘法。</p>
-<p><img src="https://img-blog.csdn.net/20161201151925746" alt="img"></p>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/19/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95%EF%BC%88RANdom-SAmple-Consensus-RANSAC%EF%BC%89/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1078,7 +1090,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
