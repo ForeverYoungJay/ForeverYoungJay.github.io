@@ -6,7 +6,7 @@
   <link href="https://foreveryoungjay.github.io/atom.xml" rel="self"/>
   
   <link href="https://foreveryoungjay.github.io/"/>
-  <updated>2021-11-29T13:35:09.470Z</updated>
+  <updated>2022-02-20T03:10:32.631Z</updated>
   <id>https://foreveryoungjay.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【强化学习】Deep Q Network(DQN)算法详解</title>
+    <link href="https://foreveryoungjay.github.io/2022/02/20/%E3%80%90%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E3%80%91Deep-Q-Network-DQN-%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://foreveryoungjay.github.io/2022/02/20/%E3%80%90%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E3%80%91Deep-Q-Network-DQN-%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/</id>
+    <published>2022-02-20T03:08:21.000Z</published>
+    <updated>2022-02-20T03:10:32.631Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_30615903/article/details/80744083">https://blog.csdn.net/qq_30615903/article/details/80744083</a></p><p><a href="https://zhuanlan.zhihu.com/p/107874859">https://zhuanlan.zhihu.com/p/107874859</a></p><p><img src="https://pic4.zhimg.com/v2-9622bd1eddf5798fa5fc90c2ea938893_r.jpg" alt="img"></p><p><img src="https://img-blog.csdnimg.cn/20191204090917866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNjE1OTAz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_30615903/article/details/80744083&quot;&gt;https://blog.csdn.net/qq_30615903/article/details/80744083&lt;/a&gt;&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>线程</title>
@@ -436,28 +457,6 @@
       
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title>摄像机原理</title>
-    <link href="https://foreveryoungjay.github.io/2021/04/22/%E6%91%84%E5%83%8F%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
-    <id>https://foreveryoungjay.github.io/2021/04/22/%E6%91%84%E5%83%8F%E6%9C%BA%E5%8E%9F%E7%90%86/</id>
-    <published>2021-04-22T13:37:23.000Z</published>
-    <updated>2021-04-22T13:39:49.760Z</updated>
-    
-    <content type="html"><![CDATA[<p>The first important content is the <strong>image forming process.</strong> The image is an array. There is only one array for black and white images, and there are three arrays for color images. Then the picture is recorded by the camera because of the black box camera and the principle of small hole forming. There is a perspective effect through the camera, and the parallel lines will converge at a vanishing point in the distance in the picture. <strong>Homogeneous coordinates</strong> represent a vector that is originally n-dimensional with an n+1-dimensional vector, which refers to a coordinate system used in projection geometry, just like <strong>Cartesian coordinates used in Euclidean geometry.</strong> 2D and 3D transformations include homogeneous coordinates and transformation.</p><p><strong>The intrinsic matrix</strong>: The focal length is from the pointer hole to the film, where the unit of focal length in pixels. <strong>The extrinsic matrix</strong> is used to describe the position of the camera in the “world coordinate system” and the direction it points to. The field of view depends on the focal length, the larger the <strong>focal length</strong>, the smaller the field of view. The smaller the focal length, the larger the field of view. The above is the position of the object in the photo, and the next is the pixel size. The biggest function of the <strong>large aperture</strong> is to highlight the subject, blur the background, and create a sense of hierarchy. The small aperture has a large clear range and is suitable for shooting themes such as scenery, travel, and documentary. The scenery is shot with a small aperture. With the pan-focus operation, the entire huge spatial scale picture can be located in a clear range. Finally, the digital camera, using imaging sensors.</p><p>The second part is <strong>image processing</strong>, Proposed the <strong>Aliasing problem</strong>, the harm caused by down-sampling danger, Characteristic errors will appear. The solution involves multiple sampling to eliminate frequencies higher than half of the new sampling, Including <strong>Gaussian filtering</strong>.</p><p><strong>Tone mapping</strong> makes the Incoming light energy and the Image intensity value not linear.</p><p><strong>Bilinear interpolation</strong> is a linear interpolation extension of an interpolation function with two variables. Its core idea is to perform a linear interpolation in two directions. </p><p><strong>Chromatic aberration:</strong> Different colors of light have different wavelengths. Therefore, the focal plane of light passing through the lens and light of different wavelengths will be slightly different. Besides, the angles of the chromatic images after passing through the lens will be slightly staggered when they reach the focal plane. That is, the seven basic colors of light reach different focal points. </p><p><strong>Histogram Equalization</strong>: It is often used to enhance the overall contrast of the picture, especially for those cases where useful data is represented by similar data. </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;The first important content is the &lt;strong&gt;image forming process.&lt;/strong&gt; The image is an array. There is only one array for black and w</summary>
-      
-    
-    
-    
-    <category term="CV" scheme="https://foreveryoungjay.github.io/categories/CV/"/>
     
     
   </entry>
