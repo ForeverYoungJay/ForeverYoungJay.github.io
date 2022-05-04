@@ -214,7 +214,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-05-04 16:52:39 / Modified: 17:04:31" itemprop="dateCreated datePublished" datetime="2022-05-04T16:52:39+08:00">2022-05-04</time>
+              <time title="Created: 2022-05-04 16:52:39 / Modified: 17:28:14" itemprop="dateCreated datePublished" datetime="2022-05-04T16:52:39+08:00">2022-05-04</time>
             </span>
 
           
@@ -229,12 +229,13 @@
 
       
           <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33328642/article/details/123683755">https://blog.csdn.net/qq_33328642/article/details/123683755</a></p>
-<h1 id="non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy"><a href="#non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy" class="headerlink" title="non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy"></a>non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy</h1><p>non-stationray：<a target="_blank" rel="noopener" href="https://stepneverstop.github.io/rl-classification.html">https://stepneverstop.github.io/rl-classification.html</a></p>
+<h1 id="non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy-Infinite-horizon-finite-horizon"><a href="#non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy-Infinite-horizon-finite-horizon" class="headerlink" title="non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy Infinite horizon finite horizon"></a>non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy Infinite horizon finite horizon</h1><p>non-stationray：<a target="_blank" rel="noopener" href="https://stepneverstop.github.io/rl-classification.html">https://stepneverstop.github.io/rl-classification.html</a></p>
 <p>Stationary or not</p>
 <p>根据环境十分稳定、可以将强化学习问题分为stationary、non-stationary。</p>
 <p>如果状态转移<strong>和</strong>奖励函数是确定的，即选择动作aa后执行它的结果是确定的，那么这个环境就是stationary。</p>
 <p>如果状态转移<strong>或</strong>奖励函数是不确定的，即选择动作aa后执行它的结果是不确定的，那么这个环境就是non-stationary。</p>
-<h1 id="强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949"><a href="#强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949" class="headerlink" title="强化学习的样本效率sample efficiency：https://blog.csdn.net/wxc971231/article/details/120992949"></a>强化学习的样本效率sample efficiency：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wxc971231/article/details/120992949">https://blog.csdn.net/wxc971231/article/details/120992949</a></h1>
+<h1 id="强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949"><a href="#强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949" class="headerlink" title="强化学习的样本效率sample efficiency：https://blog.csdn.net/wxc971231/article/details/120992949"></a>强化学习的样本效率sample efficiency：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wxc971231/article/details/120992949">https://blog.csdn.net/wxc971231/article/details/120992949</a></h1><p>horizon 这个词在各种强化学习教程里出现的频率不算高，但它也是要了解的一个概念。<br>先查词典：<br>n. 地平线；视野；眼界；范围</p>
+<p>在强化学习里面，horizon主要取“范围”的含义。也可以理解为一个agent在environment里一步步走下去，在一次交互过程中，总共走过的步数。<br>举个例子，假设有一个“怎么玩都永远不会死”的游戏（只不过得分有高低罢了），那么把这个玩游戏的过程对应到强化学习领域，它就是一个无限步的概念，即 infinite horizon；反之则是 finite horizon（有限步）的。<br>在训练强化学习模型的时候，并不是说一个游戏非要玩到挂掉才行，我们也可以限定在一个固定的 horizon 内来计算reward。所以从这个角度来说，horizon 也可以认为是agent的生存时间，当agent的剩余可用步数改变的时候，那么agent的行为可能也就会随之改变。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/05/04/RL-items/#more" rel="contents">
