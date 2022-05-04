@@ -621,4 +621,15 @@
 <p><img src="https://img-blog.csdnimg.cn/20191204090917866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMwNjE1OTAz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>RL items</title>
+    <url>/2022/05/04/RL-items/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/qq_33328642/article/details/123683755">https://blog.csdn.net/qq_33328642/article/details/123683755</a></p>
+<h1 id="non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy"><a href="#non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy" class="headerlink" title="non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy"></a>non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy</h1><p>non-stationray：<a href="https://stepneverstop.github.io/rl-classification.html">https://stepneverstop.github.io/rl-classification.html</a></p>
+<p>Stationary or not</p>
+<p>根据环境十分稳定、可以将强化学习问题分为stationary、non-stationary。</p>
+<p>如果状态转移<strong>和</strong>奖励函数是确定的，即选择动作aa后执行它的结果是确定的，那么这个环境就是stationary。</p>
+<p>如果状态转移<strong>或</strong>奖励函数是不确定的，即选择动作aa后执行它的结果是不确定的，那么这个环境就是non-stationary。</p>
+<h1 id="强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949"><a href="#强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949" class="headerlink" title="强化学习的样本效率sample efficiency：https://blog.csdn.net/wxc971231/article/details/120992949"></a>强化学习的样本效率sample efficiency：<a href="https://blog.csdn.net/wxc971231/article/details/120992949">https://blog.csdn.net/wxc971231/article/details/120992949</a></h1>]]></content>
+  </entry>
 </search>

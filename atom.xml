@@ -6,7 +6,7 @@
   <link href="https://foreveryoungjay.github.io/atom.xml" rel="self"/>
   
   <link href="https://foreveryoungjay.github.io/"/>
-  <updated>2022-03-04T02:42:22.671Z</updated>
+  <updated>2022-05-04T09:04:31.862Z</updated>
   <id>https://foreveryoungjay.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RL items</title>
+    <link href="https://foreveryoungjay.github.io/2022/05/04/RL-items/"/>
+    <id>https://foreveryoungjay.github.io/2022/05/04/RL-items/</id>
+    <published>2022-05-04T08:52:39.000Z</published>
+    <updated>2022-05-04T09:04:31.862Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_33328642/article/details/123683755">https://blog.csdn.net/qq_33328642/article/details/123683755</a></p><h1 id="non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy"><a href="#non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy" class="headerlink" title="non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy"></a>non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy</h1><p>non-stationray：<a href="https://stepneverstop.github.io/rl-classification.html">https://stepneverstop.github.io/rl-classification.html</a></p><p>Stationary or not</p><p>根据环境十分稳定、可以将强化学习问题分为stationary、non-stationary。</p><p>如果状态转移<strong>和</strong>奖励函数是确定的，即选择动作aa后执行它的结果是确定的，那么这个环境就是stationary。</p><p>如果状态转移<strong>或</strong>奖励函数是不确定的，即选择动作aa后执行它的结果是不确定的，那么这个环境就是non-stationary。</p><h1 id="强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949"><a href="#强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949" class="headerlink" title="强化学习的样本效率sample efficiency：https://blog.csdn.net/wxc971231/article/details/120992949"></a>强化学习的样本效率sample efficiency：<a href="https://blog.csdn.net/wxc971231/article/details/120992949">https://blog.csdn.net/wxc971231/article/details/120992949</a></h1>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_33328642/article/details/123683755&quot;&gt;https://blog.csdn.net/qq_33328642/article/details/123683755&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy&quot;&gt;&lt;a href=&quot;#non-stationray，sample-efficiency，planning和Learnin，Reward，off-policy和on-policy&quot; class=&quot;headerlink&quot; title=&quot;non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy&quot;&gt;&lt;/a&gt;non-stationray，sample efficiency，planning和Learnin，Reward，off-policy和on-policy&lt;/h1&gt;&lt;p&gt;non-stationray：&lt;a href=&quot;https://stepneverstop.github.io/rl-classification.html&quot;&gt;https://stepneverstop.github.io/rl-classification.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Stationary or not&lt;/p&gt;
+&lt;p&gt;根据环境十分稳定、可以将强化学习问题分为stationary、non-stationary。&lt;/p&gt;
+&lt;p&gt;如果状态转移&lt;strong&gt;和&lt;/strong&gt;奖励函数是确定的，即选择动作aa后执行它的结果是确定的，那么这个环境就是stationary。&lt;/p&gt;
+&lt;p&gt;如果状态转移&lt;strong&gt;或&lt;/strong&gt;奖励函数是不确定的，即选择动作aa后执行它的结果是不确定的，那么这个环境就是non-stationary。&lt;/p&gt;
+&lt;h1 id=&quot;强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949&quot;&gt;&lt;a href=&quot;#强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949&quot; class=&quot;headerlink&quot; title=&quot;强化学习的样本效率sample efficiency：https://blog.csdn.net/wxc971231/article/details/120992949&quot;&gt;&lt;/a&gt;强化学习的样本效率sample efficiency：&lt;a href=&quot;https://blog.csdn.net/wxc971231/article/details/120992949&quot;&gt;https://blog.csdn.net/wxc971231/article/details/120992949&lt;/a&gt;&lt;/h1&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>【强化学习】Deep Q Network(DQN)算法详解</title>
@@ -517,25 +540,6 @@
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;在该方法中构造main函数&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Sources 一般用于标注类似 src 这种可编译目录。有时候我们不单单项目的 src 目录要可编译，还有其他一些特别的目录也许我们也要作为可编译的目录，就需要对该目录进行此标注。只有 Sources 这种可编译目录才可以新建 Java 类和包，这一点需要牢记。&lt;br&gt;Tests 一般用于标注可编译的单元测试目录。在规范的 maven 项目结构中，顶级目录是 src，maven 的 src 我们是不会设置为 Sources 的，而是在其子目录 main 目录下的 java 目录，我们会设置为 Sources。而单元测试的目录是 src - test - java，这里的 java 目录我们就会设置为 Tests，表示该目录是作为可编译的单元测试目录。一般这个和后面几个我们都是在 maven 项目下进行配置的，但是我这里还是会先说说。从这一点我们也可以看出 IntelliJ IDEA 对 maven 项目的支持是比彻底的。&lt;br&gt;Resources 一般用于标注资源文件目录。在 maven 项目下，资源目录是单独划分出来的，其目录为：src - main -resources，这里的 resources 目录我们就会设置为 Resources，表示该目录是作为资源目录。资源目录下的文件是会被编译到输出目录下的。&lt;br&gt;Test Resources 一般用于标注单元测试的资源文件目录。在 maven 项目下，单元测试的资源目录是单独划分出来的，其目录为：src - test -resources，这里的 resources 目录我们就会设置为 Test Resources，表示该目录是作为单元测试的资源目录。资源目录下的文件是会被编译到输出目录下的。&lt;br&gt;Excluded 一般用于标注排除目录。被排除的目录不会被 IntelliJ IDEA 创建索引，相当于被 IntelliJ IDEA 废弃，该目录下的代码文件是不具备代码检查和智能提示等常规代码功能。&lt;br&gt;通过上面的介绍，我们知道对于非 maven 项目我们只要会设置 src 即可。&lt;/p&gt;
-</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>快速补全代码</title>
-    <link href="https://foreveryoungjay.github.io/2021/04/22/%E5%BF%AB%E9%80%9F%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/"/>
-    <id>https://foreveryoungjay.github.io/2021/04/22/%E5%BF%AB%E9%80%9F%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/</id>
-    <published>2021-04-22T14:36:59.000Z</published>
-    <updated>2021-04-22T14:37:57.383Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>将鼠标放在接口的名称处按 Alt+Enter 键</strong></p><p>实现接口：<strong>鼠标左键单击：Implement interface ，进入创建实现类的名字以及指明其所在的包的界面。选择好之后，点击ok即可完成</strong></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;将鼠标放在接口的名称处按 Alt+Enter 键&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;实现接口：&lt;strong&gt;鼠标左键单击：Implement interface ，进入创建实现类的名字以及指明其所在的包的界面。选择好之后，点击ok即可完成&lt;/strong&gt;&lt;/p&gt;
 </summary>
     
     

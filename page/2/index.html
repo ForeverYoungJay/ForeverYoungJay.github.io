@@ -189,6 +189,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/09/19/active-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
+      <meta itemprop="name" content="YANG JIYI">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YANG JIYI">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/19/active-learning/" class="post-title-link" itemprop="url">active learning</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-09-19 22:13:35 / Modified: 22:29:00" itemprop="dateCreated datePublished" datetime="2021-09-19T22:13:35+08:00">2021-09-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>主动学习（Active Learning）的大致思路就是：通过机器学习的方法获取到那些比较<strong>“难”</strong>分类的样本数据，让人工再次确认和审核，然后将人工标注得到的数据再次使用有监督学习模型或者半监督学习模型进行训练，逐步提升模型的效果，将人工经验融入机器学习的模型中。</p>
+<p>那么主动学习（Active Learning）的整体思路究竟是怎样的呢？在机器学习的建模过程中，通常包括样本选择，模型训练，模型预测，模型更新这几个步骤。在主动学习这个领域则需要把标注候选集提取和人工标注这两个步骤加入整体流程，也就是：</p>
+<ol>
+<li>机器学习模型：包括机器学习模型的训练和预测两部分；</li>
+<li>待标注的数据候选集提取：依赖主动学习中的查询函数（Query Function）；</li>
+<li>人工标注：专家经验或者业务经验的提炼；</li>
+<li>获得候选集的标注数据：获得更有价值的样本数据；</li>
+<li>机器学习模型的更新：通过增量学习或者重新学习的方式更新模型，从而将人工标注的数据融入机器学习模型中，提升模型效果</li>
+</ol>
+<p><img src="https://img2018.cnblogs.com/blog/532548/201905/532548-20190527214307519-1416709660.png" alt="img"></p>
+<p>其中 L 是用于训练已标注的样本；</p>
+<p>C 为一组或者一个算法模型，用户接收上一轮的标记样本集，通过负反馈调整模型参数，并输出对应的预测结果向量集；</p>
+<p>Q 是查询函数，用于从当前剩余的未标注样本池（未标记样本会逐渐减少）U 中查询信息量最大（最不确定）的top样本；</p>
+<p>S是督导者，可以为 U 中样本标注正确的标签；</p>
+<p>active learning模型**通过少量初始标记样本 L 开始学习，通过一定的<font color="red">查询函数 Q 选择出一个或一批最有用的样本</font>**，并向督导者询问标签，然后利用获得的新知识来训练分类器和进行下一轮查询。主动学习是一个循环的过程，直至达到某一停止准则为止。</p>
+<p>需要注意的是，active learning是一个算法框架，上图中的单个模块具备可替换性（alternative）</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/09/19/active-learning/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/05/19/%E5%9B%BE%E5%83%8F%E6%A0%A1%E6%AD%A3-Image-Rectification/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -882,74 +963,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://foreveryoungjay.github.io/2021/04/22/%E5%BF%AB%E9%80%9F%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4108565645,281447478&fm=26&gp=0.jpg">
-      <meta itemprop="name" content="YANG JIYI">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YANG JIYI">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/22/%E5%BF%AB%E9%80%9F%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/" class="post-title-link" itemprop="url">快速补全代码</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-04-22 22:36:59 / Modified: 22:37:57" itemprop="dateCreated datePublished" datetime="2021-04-22T22:36:59+08:00">2021-04-22</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>将鼠标放在接口的名称处按 Alt+Enter 键</strong></p>
-<p>实现接口：<strong>鼠标左键单击：Implement interface ，进入创建实现类的名字以及指明其所在的包的界面。选择好之后，点击ok即可完成</strong></p>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/04/22/%E5%BF%AB%E9%80%9F%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1021,7 +1034,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

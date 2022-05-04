@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://foreveryoungjay.github.io/2022/05/04/RL-items/</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://foreveryoungjay.github.io/2022/02/20/%E3%80%90%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E3%80%91Deep-Q-Network-DQN-%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/</loc>
     
     <lastmod>2022-03-04</lastmod>
@@ -193,7 +200,7 @@
 
   <url>
     <loc>https://foreveryoungjay.github.io/</loc>
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,7 +208,7 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/tags/matplotlib/</loc>
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -210,35 +217,35 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/CV/</loc>
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/Java/</loc>
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/ML/</loc>
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/python/</loc>
-    <lastmod>2022-03-04</lastmod>
+    <lastmod>2022-05-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
