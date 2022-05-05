@@ -647,6 +647,12 @@
 <p>For example if we took action a1 and got u(a1) = 1, then we computed u(a2)= 2, u(a3) = 4, u(a4) = 7. The respective regrets will be regret(a2) = u(a2) - u(a1) = 1, same for regret(a3) = 3, and regret(a4) = 6.<br>Total regrets is regret(a1) + regret(a2) + regret(a3) + regret(a4) = 0 + 1 + 3 + 6 = 10.</p>
 <p>It is easy to see that the most regretted action is a4. To reflect this numerically, we update our strategy, denoted as σ, such as σ(a2) = 1/10 = .1, σ(a3) = 3/10 = .3, σ(a4) = 6/10 = .6.</p>
 <p>Obviously, you might be asking, why not explicitly give action a4 a probability of 1 (σ(a4) = 1)? Simply because the notion of regret is used when facing another actor, such as in games. Playing in a deterministic manner in a game will give your opponent a chance to counter measure your strategy and win.</p>
+<h1 id="Improving-Sample-Efficiency-In-Model-Free-Reinforcement-Learning-From-Imageshttps-blog-csdn-net-sufail-article-details-104889591"><a href="#Improving-Sample-Efficiency-In-Model-Free-Reinforcement-Learning-From-Imageshttps-blog-csdn-net-sufail-article-details-104889591" class="headerlink" title="Improving Sample Efficiency In Model-Free Reinforcement Learning From Imageshttps://blog.csdn.net/sufail/article/details/104889591"></a>Improving Sample Efficiency In Model-Free Reinforcement Learning From Images<a href="https://blog.csdn.net/sufail/article/details/104889591">https://blog.csdn.net/sufail/article/details/104889591</a></h1><p>对<strong>事物</strong>进行感知、记忆、思考，叫做<strong>认知</strong>。</p>
+<p>对<strong>认知</strong>进行感知、记忆、思考，叫做<strong>元认知</strong>。</p>
+<p><strong>对认知进行认知，叫做元认知，对学习进行学习，可以理解为元学习。</strong></p>
+<p>虽然可以用在线学习来进行强化学习，但是本质上，</p>
+<p>在线学习 online learning=让机器用新鲜的数据流学习。</p>
+<p>强化学习 reinforcement learning=让机器学习怎么样才能更好地学习。</p>
 ]]></content>
   </entry>
 </search>
