@@ -214,7 +214,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-05-06 11:32:26 / Modified: 11:54:53" itemprop="dateCreated datePublished" datetime="2022-05-06T11:32:26+08:00">2022-05-06</time>
+              <time title="Created: 2022-05-06 11:32:26 / Modified: 15:16:03" itemprop="dateCreated datePublished" datetime="2022-05-06T11:32:26+08:00">2022-05-06</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -237,15 +237,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/384334291">https://zhuanlan.zhihu.com/p/384334291</a></p>
+          <p><strong>Trust Region Policy Optimization</strong>, or <strong>TRPO</strong>, is a policy gradient method in reinforcement learning that avoids parameter updates that change the policy too much with a KL divergence constraint on the size of the policy update at each iteration.</p>
+<p>Take the case of off-policy reinforcement learning, where the policy β for collecting trajectories on rollout workers is different from the policy π to optimize for. The objective function in an off-policy model measures the total advantage over the state visitation distribution and actions, while the mismatch between the training data distribution and the true policy state distribution is compensated with an importance sampling estimator:<br>$$<br>J\left(\theta\right) = \sum_{s\in{S}}p^{\pi_{\theta_{old}}}\sum_{a\in\mathcal{A}}\left(\beta\left(a\mid{s}\right)\frac{\pi_{\theta}\left(a\mid{s}\right)}{\beta\left(a\mid{s}\right)}\hat{A}<em>{\theta</em>{old}}\left(s, a\right)\right)<br>$$</p>
+<p>$$<br> J\left(\theta\right) = \sum_{s\in{S}}p^{\pi_{\theta_{old}}}\sum_{a\in\mathcal{A}}\left(\beta\left(a\mid{s}\right)\frac{\pi_{\theta}\left(a\mid{s}\right)}{\beta\left(a\mid{s}\right)}\hat{A}<em>{\theta</em>{old}}\left(s, a\right)\right)<br>$$</p>
+<p>$$<br> J\left(\theta\right) = \mathbb{E}<em>{s\sim{p}^{\pi</em>{\theta_{old}}}, a\sim{\beta}} \left(\frac{\pi_{\theta}\left(a\mid{s}\right)}{\beta\left(a\mid{s}\right)}\hat{A}<em>{\theta</em>{old}}\left(s, a\right)\right)<br>$$</p>
+<p>When training on policy, theoretically the policy for collecting data is same as the policy that we want to optimize. However, when rollout workers and optimizers are running in parallel asynchronously, the behavior policy can get stale. TRPO considers this subtle difference: It labels the behavior policy as πθold(a∣s) and thus the objective function becomes:<br>$$<br> J\left(\theta\right) = \mathbb{E}<em>{s\sim{p}^{\pi</em>{\theta_{old}}}, a\sim{\pi_{\theta_{old}}}} \left(\frac{\pi_{\theta}\left(a\mid{s}\right)}{\pi_{\theta_{old}}\left(a\mid{s}\right)}\hat{A}<em>{\theta</em>{old}}\left(s, a\right)\right)<br>$$<br>TRPO aims to maximize the objective function J(θ) subject to a trust region constraint which enforces the distance between old and new policies measured by KL-divergence to be small enough, within a parameter δ:<br>$$<br> \mathbb{E}<em>{s\sim{p}^{\pi</em>{\theta_{old}}}} \left[D_{KL}\left(\pi_{\theta_{old}}\left(.\mid{s}\right)\mid\mid\pi_{\theta}\left(.\mid{s}\right)\right)\right] \leq \delta<br>$$</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/384334291">https://zhuanlan.zhihu.com/p/384334291</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43616565/article/details/121090957">https://blog.csdn.net/qq_43616565/article/details/121090957</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/331850355?utm_source=wechat_session">https://zhuanlan.zhihu.com/p/331850355?utm_source=wechat_session</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/114866455">https://zhuanlan.zhihu.com/p/114866455</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26308073">https://zhuanlan.zhihu.com/p/26308073</a></p>
-<h1 id="置信域优化（TR-Trust-Region-Optimization）"><a href="#置信域优化（TR-Trust-Region-Optimization）" class="headerlink" title="置信域优化（TR, Trust Region Optimization）"></a>置信域优化（TR, Trust Region Optimization）</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/3c9c7d68a6d7">https://www.jianshu.com/p/3c9c7d68a6d7</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.codelast.com/%E5%8E%9F%E5%88%9B%E4%BF%A1%E8%B5%96%E5%9F%9Ftrust-region%E7%AE%97%E6%B3%95%E6%98%AF%E6%80%8E%E4%B9%88%E4%B8%80%E5%9B%9E%E4%BA%8B/">https://www.codelast.com/%E5%8E%9F%E5%88%9B%E4%BF%A1%E8%B5%96%E5%9F%9Ftrust-region%E7%AE%97%E6%B3%95%E6%98%AF%E6%80%8E%E4%B9%88%E4%B8%80%E5%9B%9E%E4%BA%8B/</a></p>
-<p><a target="_blank" rel="noopener" href="https://welts.xyz/2021/12/18/tr/">https://welts.xyz/2021/12/18/tr/</a></p>
-
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/05/06/%E7%BD%AE%E4%BF%A1%E5%9F%9F%E7%AD%96%E7%95%A5%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94TRPO/#more" rel="contents">
