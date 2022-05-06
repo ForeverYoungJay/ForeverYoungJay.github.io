@@ -630,6 +630,7 @@
 <p>根据环境十分稳定、可以将强化学习问题分为stationary、non-stationary。</p>
 <p>如果状态转移<strong>和</strong>奖励函数是确定的，即选择动作aa后执行它的结果是确定的，那么这个环境就是stationary。</p>
 <p>如果状态转移<strong>或</strong>奖励函数是不确定的，即选择动作aa后执行它的结果是不确定的，那么这个环境就是non-stationary。</p>
+<p>A <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.516.4121&rep=rep1&type=pdf"><strong>stationary (平稳) policy</strong></a>, 𝜋𝑡πt, is a policy that does not change over time, that is, 𝜋𝑡=𝜋,∀𝑡≥0πt=π,∀t≥0, where 𝜋π can either be a function, 𝜋:𝑆→𝐴π:S→A (a deterministic (确定性) policy), or a conditional (条件) density, 𝜋(𝐴∣𝑆)π(A∣S) (a stochastic (随机) policy). A <strong>non-stationary policy</strong> is a policy that is <strong>not</strong> stationary (平稳) . More precisely, 𝜋𝑖πi may not be equal to 𝜋𝑗πj, for 𝑖≠𝑗≥0i≠j≥0, where 𝑖i and 𝑗j are thus two different time steps.</p>
 <h1 id="强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949"><a href="#强化学习的样本效率sample-efficiency：https-blog-csdn-net-wxc971231-article-details-120992949" class="headerlink" title="强化学习的样本效率sample efficiency：https://blog.csdn.net/wxc971231/article/details/120992949"></a>强化学习的样本效率sample efficiency：<a href="https://blog.csdn.net/wxc971231/article/details/120992949">https://blog.csdn.net/wxc971231/article/details/120992949</a></h1><p>horizon 这个词在各种强化学习教程里出现的频率不算高，但它也是要了解的一个概念。<br>先查词典：<br>n. 地平线；视野；眼界；范围</p>
 <p>在强化学习里面，horizon主要取“范围”的含义。也可以理解为一个agent在environment里一步步走下去，在一次交互过程中，总共走过的步数。<br>举个例子，假设有一个“怎么玩都永远不会死”的游戏（只不过得分有高低罢了），那么把这个玩游戏的过程对应到强化学习领域，它就是一个无限步的概念，即 infinite horizon；反之则是 finite horizon（有限步）的。<br>在训练强化学习模型的时候，并不是说一个游戏非要玩到挂掉才行，我们也可以限定在一个固定的 horizon 内来计算reward。所以从这个角度来说，horizon 也可以认为是agent的生存时间，当agent的剩余可用步数改变的时候，那么agent的行为可能也就会随之改变。</p>
 <p><a href="https://www.guyuehome.com/36204">https://www.guyuehome.com/36204</a></p>
@@ -654,5 +655,21 @@
 <p>在线学习 online learning=让机器用新鲜的数据流学习。</p>
 <p>强化学习 reinforcement learning=让机器学习怎么样才能更好地学习。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>置信域策略优化算法——TRPO</title>
+    <url>/2022/05/06/%E7%BD%AE%E4%BF%A1%E5%9F%9F%E7%AD%96%E7%95%A5%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94TRPO/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/384334291">https://zhuanlan.zhihu.com/p/384334291</a></p>
+<p><a href="https://blog.csdn.net/qq_43616565/article/details/121090957">https://blog.csdn.net/qq_43616565/article/details/121090957</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/331850355?utm_source=wechat_session">https://zhuanlan.zhihu.com/p/331850355?utm_source=wechat_session</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/114866455">https://zhuanlan.zhihu.com/p/114866455</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/26308073">https://zhuanlan.zhihu.com/p/26308073</a></p>
+<h1 id="置信域优化（TR-Trust-Region-Optimization）"><a href="#置信域优化（TR-Trust-Region-Optimization）" class="headerlink" title="置信域优化（TR, Trust Region Optimization）"></a>置信域优化（TR, Trust Region Optimization）</h1><p><a href="https://www.jianshu.com/p/3c9c7d68a6d7">https://www.jianshu.com/p/3c9c7d68a6d7</a></p>
+<p><a href="https://www.codelast.com/%E5%8E%9F%E5%88%9B%E4%BF%A1%E8%B5%96%E5%9F%9Ftrust-region%E7%AE%97%E6%B3%95%E6%98%AF%E6%80%8E%E4%B9%88%E4%B8%80%E5%9B%9E%E4%BA%8B/">https://www.codelast.com/%E5%8E%9F%E5%88%9B%E4%BF%A1%E8%B5%96%E5%9F%9Ftrust-region%E7%AE%97%E6%B3%95%E6%98%AF%E6%80%8E%E4%B9%88%E4%B8%80%E5%9B%9E%E4%BA%8B/</a></p>
+<p><a href="https://welts.xyz/2021/12/18/tr/">https://welts.xyz/2021/12/18/tr/</a></p>
+]]></content>
+      <categories>
+        <category>RL</category>
+      </categories>
   </entry>
 </search>
