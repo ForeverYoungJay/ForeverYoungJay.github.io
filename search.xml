@@ -677,4 +677,20 @@
         <category>RL</category>
       </categories>
   </entry>
+  <entry>
+    <title>蒙特卡洛树搜索Monte Carlo Tree Search</title>
+    <url>/2022/05/07/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2Monte-Carlo-Tree-Search/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/53948964">https://zhuanlan.zhihu.com/p/53948964</a></p>
+<p><a href="https://aijishu.com/a/1060000000089474">https://aijishu.com/a/1060000000089474</a></p>
+<ol>
+<li><strong>选择</strong>（Selection）</li>
+<li><strong>扩展</strong> (expansion)</li>
+<li><strong>模拟</strong>（Simulation）</li>
+<li><strong>回溯</strong>（Backpropagation）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>RL</category>
+      </categories>
+  </entry>
 </search>

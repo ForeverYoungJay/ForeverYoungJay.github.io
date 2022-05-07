@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://foreveryoungjay.github.io/2022/05/07/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2Monte-Carlo-Tree-Search/</loc>
+    
+    <lastmod>2022-05-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://foreveryoungjay.github.io/2022/05/06/%E7%BD%AE%E4%BF%A1%E5%9F%9F%E7%AD%96%E7%95%A5%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94TRPO/</loc>
     
     <lastmod>2022-05-06</lastmod>
@@ -207,7 +214,7 @@
 
   <url>
     <loc>https://foreveryoungjay.github.io/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -215,7 +222,7 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/tags/matplotlib/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -224,42 +231,42 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/CV/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/Java/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/ML/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/python/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/RL/</loc>
-    <lastmod>2022-05-06</lastmod>
+    <lastmod>2022-05-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
