@@ -76,7 +76,7 @@
   </entry>
   <entry>
     <title>Statement和PrepareStatement的区别详解</title>
-    <url>/2021/04/21/Statement%E5%92%8CPrepareStatement%E7%9A%84%E5%8C%BA%E5%88%AB%E8%AF%A6%E8%A7%A3/</url>
+    <url>/2021/04/22/Statement%E5%92%8CPrepareStatement%E7%9A%84%E5%8C%BA%E5%88%AB%E8%AF%A6%E8%A7%A3/</url>
     <content><![CDATA[<p>联系：<br>1.PreparedStatement继承自Statement，两者都是接口。<br>2.内部都要建立类似于Sockt连接，效率都不是特别高。</p>
 <p>从资源利用和安全的角度区分两者的不同：</p>
 <p>关于批处理时如何选择，以数据量大小位标准分三种情况：<br>1）量比较小，二者皆差别不大。<br>2）量比较多，在PreparedStatement预编译空间范围之内，选择PreparedStatement，因为其只预编译一次sql语句。<br>3）量特别大，使用Statement，因为PrepareStatement的预编译空间有限，当数据量特别大时，会发生异常。<br>特殊情况还有：执行不同的sql语句，批处理…等等 ，可以从消耗资源的角度再次分析。</p>
@@ -692,5 +692,14 @@
       <categories>
         <category>RL</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Imitation Learning</title>
+    <url>/2022/07/09/Imitation-Learning/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/25688750">https://zhuanlan.zhihu.com/p/25688750</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/140348314">https://zhuanlan.zhihu.com/p/140348314</a></p>
+<p><a href="https://jonathan-hui.medium.com/rl-imitation-learning-ac28116c02fc">https://jonathan-hui.medium.com/rl-imitation-learning-ac28116c02fc</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/27935902">https://zhuanlan.zhihu.com/p/27935902</a></p>
+]]></content>
   </entry>
 </search>

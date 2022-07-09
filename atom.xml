@@ -6,7 +6,7 @@
   <link href="https://foreveryoungjay.github.io/atom.xml" rel="self"/>
   
   <link href="https://foreveryoungjay.github.io/"/>
-  <updated>2022-05-07T14:29:08.210Z</updated>
+  <updated>2022-07-09T10:46:40.618Z</updated>
   <id>https://foreveryoungjay.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Imitation Learning</title>
+    <link href="https://foreveryoungjay.github.io/2022/07/09/Imitation-Learning/"/>
+    <id>https://foreveryoungjay.github.io/2022/07/09/Imitation-Learning/</id>
+    <published>2022-07-09T09:23:02.000Z</published>
+    <updated>2022-07-09T10:46:40.618Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/25688750">https://zhuanlan.zhihu.com/p/25688750</a></p><p><a href="https://zhuanlan.zhihu.com/p/140348314">https://zhuanlan.zhihu.com/p/140348314</a></p><p><a href="https://jonathan-hui.medium.com/rl-imitation-learning-ac28116c02fc">https://jonathan-hui.medium.com/rl-imitation-learning-ac28116c02fc</a></p><p><a href="https://zhuanlan.zhihu.com/p/27935902">https://zhuanlan.zhihu.com/p/27935902</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/25688750&quot;&gt;https://zhuanlan.zhihu.com/p/25688750&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/140348314&quot;&gt;https://zhuanlan.zhihu.com/p/140348314&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jonathan-hui.medium.com/rl-imitation-learning-ac28116c02fc&quot;&gt;https://jonathan-hui.medium.com/rl-imitation-learning-ac28116c02fc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27935902&quot;&gt;https://zhuanlan.zhihu.com/p/27935902&lt;/a&gt;&lt;/p&gt;
+</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>蒙特卡洛树搜索Monte Carlo Tree Search</title>
@@ -522,32 +543,6 @@
     
     
     <category term="CV" scheme="https://foreveryoungjay.github.io/categories/CV/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Laplacian滤波器并用于图像锐化</title>
-    <link href="https://foreveryoungjay.github.io/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/"/>
-    <id>https://foreveryoungjay.github.io/2021/04/23/Laplacian%E6%BB%A4%E6%B3%A2%E5%99%A8%E5%B9%B6%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%83%8F%E9%94%90%E5%8C%96/</id>
-    <published>2021-04-23T12:59:44.000Z</published>
-    <updated>2021-04-23T13:03:56.552Z</updated>
-    
-    <content type="html"><![CDATA[<p>拉普拉斯算子在平面内的数值近似<img src="https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png" alt="img"></p><p>拉普拉斯滤波器卷积核表示</p><p><img src="https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png" alt="img"></p><p><strong>利用Laplacian滤波器实现图像的锐化</strong></p><p>​    <em><strong>由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。</strong></em></p><p>​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：</p><p><img src="https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png" alt="img"></p><p>使用拉普拉斯滤波器实现的图像锐化算法 ↑</p><p>​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）</p><p><img src="https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg" alt="img"></p><p><img src="https://upload-images.jianshu.io/upload_images/17221499-d637f9f3eed4ac8f.jpg" alt="img"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;拉普拉斯算子在平面内的数值近似&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/17221499-3e786a6fb102af0e.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;拉普拉斯滤波器卷积核表示&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/17221499-e20d129fc03194b2.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;利用Laplacian滤波器实现图像的锐化&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;​    &lt;em&gt;&lt;strong&gt;由于拉普拉斯是一种微分算子，它的应用可增强图像中灰度突变的区域，减弱灰度的缓慢变化区域。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;​    因此，锐化处理可选择拉普拉斯算子对原图像进行处理，产生描述灰度突变的图像，再将拉普拉斯图像与原始图像叠加而产生锐化图像：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/17221499-4d9aa12dca91d82e.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;使用拉普拉斯滤波器实现的图像锐化算法 ↑&lt;/p&gt;
-&lt;p&gt;​    其中，f(x,y)为原始图像，g(x,y)为锐化后图像，c为-1（卷积核中间为负数时，若卷积核中间为正数，则c为1）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/17221499-d07f876233acc8f8.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
     
     
   </entry>
