@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://foreveryoungjay.github.io/about/index.html</loc>
+    
+    <lastmod>2022-07-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://foreveryoungjay.github.io/2022/07/09/Imitation-Learning/</loc>
     
     <lastmod>2022-07-09</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://foreveryoungjay.github.io/2021/11/05/cluster%E8%81%9A%E5%90%88%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</loc>
     
     <lastmod>2021-11-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://foreveryoungjay.github.io/about/index.html</loc>
-    
-    <lastmod>2021-10-30</lastmod>
     
   </url>
   
@@ -221,7 +221,7 @@
 
   <url>
     <loc>https://foreveryoungjay.github.io/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -229,7 +229,7 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/tags/matplotlib/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -238,42 +238,42 @@
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/CV/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/Java/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/ML/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/python/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://foreveryoungjay.github.io/categories/RL/</loc>
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
